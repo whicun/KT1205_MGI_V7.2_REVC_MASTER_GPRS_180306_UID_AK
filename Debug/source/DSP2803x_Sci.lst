@@ -1,0 +1,2203 @@
+TMS320C2000 Assembler PC v16.9.6 Tue Mar 06 18:34:40 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Admin\AppData\Local\Temp\{399071AC-28E2-450C-AB44-40EE58F24F3A} PAGE    1
+
+       1              ;***************************************************************
+       2              ;* TMS320C2000 C/C++ Codegen                    PC v16.9.6.LTS *
+       3              ;* Date/Time created: Tue Mar 06 18:34:40 2018                 *
+       4              ;***************************************************************
+       5                      .compiler_opts --abi=coffabi --cla_support=cla0 --diag_wrap=off --float_support=softlib --hll_source=
+       6                      .asg    XAR2, FP
+       7              
+       8              $C$DW$CU        .dwtag  DW_TAG_compile_unit
+       9                      .dwattr $C$DW$CU, DW_AT_name("../source/DSP2803x_Sci.c")
+      10                      .dwattr $C$DW$CU, DW_AT_producer("TI TMS320C2000 C/C++ Codegen PC v16.9.6.LTS Copyright (c) 1996-2017
+      11                      .dwattr $C$DW$CU, DW_AT_TI_version(0x01)
+      12                      .dwattr $C$DW$CU, DW_AT_comp_dir("C:\Users\Admin\workspace_v7\KT1205_MGI_V7.2_REVC_MASTER_GPRS_180301
+      13              
+      14              ;**************************************************************
+      15              ;* FUNCTION SYNONYMS                                          *
+      16              ;**************************************************************
+      17                      .global _InitSciGpio
+      18        0000' _InitSciGpio    .set _InitSciaGpio
+      19              $C$DW$1 .dwtag  DW_TAG_variable
+      20                      .dwattr $C$DW$1, DW_AT_name("GpioCtrlRegs")
+      21                      .dwattr $C$DW$1, DW_AT_TI_symbol_name("_GpioCtrlRegs")
+      22                      .dwattr $C$DW$1, DW_AT_type(*$C$DW$T$46)
+      23                      .dwattr $C$DW$1, DW_AT_declaration
+      24                      .dwattr $C$DW$1, DW_AT_external
+      25              
+      26              ;       C:\ti\ccsv7\tools\compiler\ti-cgt-c2000_16.9.6.LTS\bin\opt2000.exe C:\\Users\\Admin\\AppData\\Local\\
+      27              ;       C:\ti\ccsv7\tools\compiler\ti-cgt-c2000_16.9.6.LTS\bin\ac2000.exe -@C:\\Users\\Admin\\AppData\\Local\
+      28 00000000               .sect   ".text"
+      29                      .clink
+      30                      .global _InitSciaGpio
+      31              
+      32              $C$DW$2 .dwtag  DW_TAG_subprogram
+      33                      .dwattr $C$DW$2, DW_AT_name("InitSciaGpio")
+      34                      .dwattr $C$DW$2, DW_AT_low_pc(_InitSciaGpio)
+      35                      .dwattr $C$DW$2, DW_AT_high_pc(0x00)
+      36                      .dwattr $C$DW$2, DW_AT_TI_symbol_name("_InitSciaGpio")
+      37                      .dwattr $C$DW$2, DW_AT_external
+      38                      .dwattr $C$DW$2, DW_AT_TI_begin_file("../source/DSP2803x_Sci.c")
+      39                      .dwattr $C$DW$2, DW_AT_TI_begin_line(0x31)
+      40                      .dwattr $C$DW$2, DW_AT_TI_begin_column(0x06)
+      41                      .dwattr $C$DW$2, DW_AT_TI_max_frame_size(-2)
+      42                      .dwpsn  file "../source/DSP2803x_Sci.c",line 50,column 1,is_stmt,address _InitSciaGpio,isa 0
+      43              
+      44                      .dwfde $C$DW$CIE, _InitSciaGpio
+      45              
+      46              ;***************************************************************
+      47              ;* FNAME: _InitSciaGpio                 FR SIZE:   0           *
+      48              ;*                                                             *
+      49              ;* FUNCTION ENVIRONMENT                                        *
+      50              ;*                                                             *
+      51              ;* FUNCTION PROPERTIES                                         *
+      52              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+      53              ;***************************************************************
+      54              
+      55 00000000       _InitSciaGpio:
+TMS320C2000 Assembler PC v16.9.6 Tue Mar 06 18:34:40 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Admin\AppData\Local\Temp\{399071AC-28E2-450C-AB44-40EE58F24F3A} PAGE    2
+
+      56              ;* AR5   assigned to $O$C1
+      57                      .dwcfi  cfa_offset, -2
+      58                      .dwcfi  save_reg_to_mem, 26, 0
+      59 00000000 7622   EALLOW
+      60                      .dwpsn  file "../source/DSP2803x_Sci.c",line 58,column 2,is_stmt,isa 0
+      61 00000001 8F40!         MOVL      XAR5,#_GpioCtrlRegs   ; [CPU_U] |58| 
+         00000002 0000 
+      62 00000003 8AA5          MOVL      XAR4,XAR5             ; [CPU_] |58| 
+      63 00000004 761F!         MOVW      DP,#_GpioCtrlRegs+12  ; [CPU_U] 
+         00000005 0000 
+      64 00000006 DC0C          ADDB      XAR4,#12              ; [CPU_] |58| 
+      65 00000007 18C4          AND       *+XAR4[0],#0xff7f     ; [CPU_] |58| 
+         00000008 FF7F 
+      66                      .dwpsn  file "../source/DSP2803x_Sci.c",line 61,column 2,is_stmt,isa 0
+      67 00000009 180C!         AND       @_GpioCtrlRegs+12,#0xefff ; [CPU_] |61| 
+         0000000a EFFF 
+      68                      .dwpsn  file "../source/DSP2803x_Sci.c",line 68,column 2,is_stmt,isa 0
+      69 0000000b 1AD5          OR        *+XAR5[2],#0xc000     ; [CPU_] |68| 
+         0000000c C000 
+      70                      .dwpsn  file "../source/DSP2803x_Sci.c",line 74,column 2,is_stmt,isa 0
+      71 0000000d CCF5          AND       AL,*+XAR5[6],#0x3fff  ; [CPU_] |74| 
+         0000000e 3FFF 
+      72 0000000f 1AA9          OR        AL,#0x8000            ; [CPU_] |74| 
+         00000010 8000 
+      73 00000011 9606!         MOV       @_GpioCtrlRegs+6,AL   ; [CPU_] |74| 
+      74                      .dwpsn  file "../source/DSP2803x_Sci.c",line 77,column 2,is_stmt,isa 0
+      75 00000012 CCFD          AND       AL,*+XAR5[7],#0xfeff  ; [CPU_] |77| 
+         00000013 FEFF 
+      76 00000014 1AA9          OR        AL,#0x0200            ; [CPU_] |77| 
+         00000015 0200 
+      77 00000016 9607!         MOV       @_GpioCtrlRegs+7,AL   ; [CPU_] |77| 
+      78 00000017 761A   EDIS
+      79 00000018 FF69          SPM       #0                    ; [CPU_] 
+      80              $C$DW$3 .dwtag  DW_TAG_TI_branch
+      81                      .dwattr $C$DW$3, DW_AT_low_pc(0x00)
+      82                      .dwattr $C$DW$3, DW_AT_TI_return
+      83              
+      84 00000019 0006          LRETR     ; [CPU_] 
+      85                      ; return occurs ; [] 
+      86                      .dwattr $C$DW$2, DW_AT_TI_end_file("../source/DSP2803x_Sci.c")
+      87                      .dwattr $C$DW$2, DW_AT_TI_end_line(0x50)
+      88                      .dwattr $C$DW$2, DW_AT_TI_end_column(0x01)
+      89                      .dwendentry
+      90                      .dwendtag $C$DW$2
+      91              
+      92 0000001a               .sect   ".text"
+      93                      .clink
+      94                      .global _InitSci
+      95              
+      96              $C$DW$4 .dwtag  DW_TAG_subprogram
+      97                      .dwattr $C$DW$4, DW_AT_name("InitSci")
+      98                      .dwattr $C$DW$4, DW_AT_low_pc(_InitSci)
+      99                      .dwattr $C$DW$4, DW_AT_high_pc(0x00)
+     100                      .dwattr $C$DW$4, DW_AT_TI_symbol_name("_InitSci")
+     101                      .dwattr $C$DW$4, DW_AT_external
+TMS320C2000 Assembler PC v16.9.6 Tue Mar 06 18:34:40 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Admin\AppData\Local\Temp\{399071AC-28E2-450C-AB44-40EE58F24F3A} PAGE    3
+
+     102                      .dwattr $C$DW$4, DW_AT_TI_begin_file("../source/DSP2803x_Sci.c")
+     103                      .dwattr $C$DW$4, DW_AT_TI_begin_line(0x16)
+     104                      .dwattr $C$DW$4, DW_AT_TI_begin_column(0x06)
+     105                      .dwattr $C$DW$4, DW_AT_TI_max_frame_size(-2)
+     106                      .dwpsn  file "../source/DSP2803x_Sci.c",line 23,column 1,is_stmt,address _InitSci,isa 0
+     107              
+     108                      .dwfde $C$DW$CIE, _InitSci
+     109              
+     110              ;***************************************************************
+     111              ;* FNAME: _InitSci                      FR SIZE:   0           *
+     112              ;*                                                             *
+     113              ;* FUNCTION ENVIRONMENT                                        *
+     114              ;*                                                             *
+     115              ;* FUNCTION PROPERTIES                                         *
+     116              ;*                            0 Parameter,  0 Auto,  0 SOE     *
+     117              ;***************************************************************
+     118              
+     119 0000001a       _InitSci:
+     120                      .dwcfi  cfa_offset, -2
+     121                      .dwcfi  save_reg_to_mem, 26, 0
+     122              $C$DW$5 .dwtag  DW_TAG_TI_branch
+     123                      .dwattr $C$DW$5, DW_AT_low_pc(0x00)
+     124                      .dwattr $C$DW$5, DW_AT_TI_return
+     125              
+     126 0000001a 0006          LRETR     ; [CPU_] 
+     127                      ; return occurs ; [] 
+     128                      .dwattr $C$DW$4, DW_AT_TI_end_file("../source/DSP2803x_Sci.c")
+     129                      .dwattr $C$DW$4, DW_AT_TI_end_line(0x1c)
+     130                      .dwattr $C$DW$4, DW_AT_TI_end_column(0x01)
+     131                      .dwendentry
+     132                      .dwendtag $C$DW$4
+     133              
+     134              ;**************************************************************
+     135              ;* UNDEFINED EXTERNAL REFERENCES                              *
+     136              ;**************************************************************
+     137                      .global _GpioCtrlRegs
+     138              
+     139              ;***************************************************************
+     140              ;* TYPE INFORMATION                                            *
+     141              ;***************************************************************
+     142              
+     143              $C$DW$T$20      .dwtag  DW_TAG_structure_type
+     144                      .dwattr $C$DW$T$20, DW_AT_name("AIODAT_BITS")
+     145                      .dwattr $C$DW$T$20, DW_AT_byte_size(0x01)
+     146              $C$DW$6 .dwtag  DW_TAG_member
+     147                      .dwattr $C$DW$6, DW_AT_type(*$C$DW$T$19)
+     148                      .dwattr $C$DW$6, DW_AT_name("rsvd1")
+     149                      .dwattr $C$DW$6, DW_AT_TI_symbol_name("_rsvd1")
+     150                      .dwattr $C$DW$6, DW_AT_bit_offset(0x0f)
+     151                      .dwattr $C$DW$6, DW_AT_bit_size(0x01)
+     152                      .dwattr $C$DW$6, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     153                      .dwattr $C$DW$6, DW_AT_accessibility(DW_ACCESS_public)
+     154              
+     155              $C$DW$7 .dwtag  DW_TAG_member
+     156                      .dwattr $C$DW$7, DW_AT_type(*$C$DW$T$19)
+TMS320C2000 Assembler PC v16.9.6 Tue Mar 06 18:34:40 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Admin\AppData\Local\Temp\{399071AC-28E2-450C-AB44-40EE58F24F3A} PAGE    4
+
+     157                      .dwattr $C$DW$7, DW_AT_name("rsvd2")
+     158                      .dwattr $C$DW$7, DW_AT_TI_symbol_name("_rsvd2")
+     159                      .dwattr $C$DW$7, DW_AT_bit_offset(0x0e)
+     160                      .dwattr $C$DW$7, DW_AT_bit_size(0x01)
+     161                      .dwattr $C$DW$7, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     162                      .dwattr $C$DW$7, DW_AT_accessibility(DW_ACCESS_public)
+     163              
+     164              $C$DW$8 .dwtag  DW_TAG_member
+     165                      .dwattr $C$DW$8, DW_AT_type(*$C$DW$T$19)
+     166                      .dwattr $C$DW$8, DW_AT_name("AIO2")
+     167                      .dwattr $C$DW$8, DW_AT_TI_symbol_name("_AIO2")
+     168                      .dwattr $C$DW$8, DW_AT_bit_offset(0x0d)
+     169                      .dwattr $C$DW$8, DW_AT_bit_size(0x01)
+     170                      .dwattr $C$DW$8, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     171                      .dwattr $C$DW$8, DW_AT_accessibility(DW_ACCESS_public)
+     172              
+     173              $C$DW$9 .dwtag  DW_TAG_member
+     174                      .dwattr $C$DW$9, DW_AT_type(*$C$DW$T$19)
+     175                      .dwattr $C$DW$9, DW_AT_name("rsvd3")
+     176                      .dwattr $C$DW$9, DW_AT_TI_symbol_name("_rsvd3")
+     177                      .dwattr $C$DW$9, DW_AT_bit_offset(0x0c)
+     178                      .dwattr $C$DW$9, DW_AT_bit_size(0x01)
+     179                      .dwattr $C$DW$9, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     180                      .dwattr $C$DW$9, DW_AT_accessibility(DW_ACCESS_public)
+     181              
+     182              $C$DW$10        .dwtag  DW_TAG_member
+     183                      .dwattr $C$DW$10, DW_AT_type(*$C$DW$T$19)
+     184                      .dwattr $C$DW$10, DW_AT_name("AIO4")
+     185                      .dwattr $C$DW$10, DW_AT_TI_symbol_name("_AIO4")
+     186                      .dwattr $C$DW$10, DW_AT_bit_offset(0x0b)
+     187                      .dwattr $C$DW$10, DW_AT_bit_size(0x01)
+     188                      .dwattr $C$DW$10, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     189                      .dwattr $C$DW$10, DW_AT_accessibility(DW_ACCESS_public)
+     190              
+     191              $C$DW$11        .dwtag  DW_TAG_member
+     192                      .dwattr $C$DW$11, DW_AT_type(*$C$DW$T$19)
+     193                      .dwattr $C$DW$11, DW_AT_name("rsvd4")
+     194                      .dwattr $C$DW$11, DW_AT_TI_symbol_name("_rsvd4")
+     195                      .dwattr $C$DW$11, DW_AT_bit_offset(0x0a)
+     196                      .dwattr $C$DW$11, DW_AT_bit_size(0x01)
+     197                      .dwattr $C$DW$11, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     198                      .dwattr $C$DW$11, DW_AT_accessibility(DW_ACCESS_public)
+     199              
+     200              $C$DW$12        .dwtag  DW_TAG_member
+     201                      .dwattr $C$DW$12, DW_AT_type(*$C$DW$T$19)
+     202                      .dwattr $C$DW$12, DW_AT_name("AIO6")
+     203                      .dwattr $C$DW$12, DW_AT_TI_symbol_name("_AIO6")
+     204                      .dwattr $C$DW$12, DW_AT_bit_offset(0x09)
+     205                      .dwattr $C$DW$12, DW_AT_bit_size(0x01)
+     206                      .dwattr $C$DW$12, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     207                      .dwattr $C$DW$12, DW_AT_accessibility(DW_ACCESS_public)
+     208              
+     209              $C$DW$13        .dwtag  DW_TAG_member
+     210                      .dwattr $C$DW$13, DW_AT_type(*$C$DW$T$19)
+     211                      .dwattr $C$DW$13, DW_AT_name("rsvd5")
+TMS320C2000 Assembler PC v16.9.6 Tue Mar 06 18:34:40 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Admin\AppData\Local\Temp\{399071AC-28E2-450C-AB44-40EE58F24F3A} PAGE    5
+
+     212                      .dwattr $C$DW$13, DW_AT_TI_symbol_name("_rsvd5")
+     213                      .dwattr $C$DW$13, DW_AT_bit_offset(0x08)
+     214                      .dwattr $C$DW$13, DW_AT_bit_size(0x01)
+     215                      .dwattr $C$DW$13, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     216                      .dwattr $C$DW$13, DW_AT_accessibility(DW_ACCESS_public)
+     217              
+     218              $C$DW$14        .dwtag  DW_TAG_member
+     219                      .dwattr $C$DW$14, DW_AT_type(*$C$DW$T$19)
+     220                      .dwattr $C$DW$14, DW_AT_name("rsvd6")
+     221                      .dwattr $C$DW$14, DW_AT_TI_symbol_name("_rsvd6")
+     222                      .dwattr $C$DW$14, DW_AT_bit_offset(0x07)
+     223                      .dwattr $C$DW$14, DW_AT_bit_size(0x01)
+     224                      .dwattr $C$DW$14, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     225                      .dwattr $C$DW$14, DW_AT_accessibility(DW_ACCESS_public)
+     226              
+     227              $C$DW$15        .dwtag  DW_TAG_member
+     228                      .dwattr $C$DW$15, DW_AT_type(*$C$DW$T$19)
+     229                      .dwattr $C$DW$15, DW_AT_name("rsvd7")
+     230                      .dwattr $C$DW$15, DW_AT_TI_symbol_name("_rsvd7")
+     231                      .dwattr $C$DW$15, DW_AT_bit_offset(0x06)
+     232                      .dwattr $C$DW$15, DW_AT_bit_size(0x01)
+     233                      .dwattr $C$DW$15, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     234                      .dwattr $C$DW$15, DW_AT_accessibility(DW_ACCESS_public)
+     235              
+     236              $C$DW$16        .dwtag  DW_TAG_member
+     237                      .dwattr $C$DW$16, DW_AT_type(*$C$DW$T$19)
+     238                      .dwattr $C$DW$16, DW_AT_name("AIO10")
+     239                      .dwattr $C$DW$16, DW_AT_TI_symbol_name("_AIO10")
+     240                      .dwattr $C$DW$16, DW_AT_bit_offset(0x05)
+     241                      .dwattr $C$DW$16, DW_AT_bit_size(0x01)
+     242                      .dwattr $C$DW$16, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     243                      .dwattr $C$DW$16, DW_AT_accessibility(DW_ACCESS_public)
+     244              
+     245              $C$DW$17        .dwtag  DW_TAG_member
+     246                      .dwattr $C$DW$17, DW_AT_type(*$C$DW$T$19)
+     247                      .dwattr $C$DW$17, DW_AT_name("rsvd8")
+     248                      .dwattr $C$DW$17, DW_AT_TI_symbol_name("_rsvd8")
+     249                      .dwattr $C$DW$17, DW_AT_bit_offset(0x04)
+     250                      .dwattr $C$DW$17, DW_AT_bit_size(0x01)
+     251                      .dwattr $C$DW$17, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     252                      .dwattr $C$DW$17, DW_AT_accessibility(DW_ACCESS_public)
+     253              
+     254              $C$DW$18        .dwtag  DW_TAG_member
+     255                      .dwattr $C$DW$18, DW_AT_type(*$C$DW$T$19)
+     256                      .dwattr $C$DW$18, DW_AT_name("AIO12")
+     257                      .dwattr $C$DW$18, DW_AT_TI_symbol_name("_AIO12")
+     258                      .dwattr $C$DW$18, DW_AT_bit_offset(0x03)
+     259                      .dwattr $C$DW$18, DW_AT_bit_size(0x01)
+     260                      .dwattr $C$DW$18, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     261                      .dwattr $C$DW$18, DW_AT_accessibility(DW_ACCESS_public)
+     262              
+     263              $C$DW$19        .dwtag  DW_TAG_member
+     264                      .dwattr $C$DW$19, DW_AT_type(*$C$DW$T$19)
+     265                      .dwattr $C$DW$19, DW_AT_name("rsvd9")
+     266                      .dwattr $C$DW$19, DW_AT_TI_symbol_name("_rsvd9")
+TMS320C2000 Assembler PC v16.9.6 Tue Mar 06 18:34:40 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Admin\AppData\Local\Temp\{399071AC-28E2-450C-AB44-40EE58F24F3A} PAGE    6
+
+     267                      .dwattr $C$DW$19, DW_AT_bit_offset(0x02)
+     268                      .dwattr $C$DW$19, DW_AT_bit_size(0x01)
+     269                      .dwattr $C$DW$19, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     270                      .dwattr $C$DW$19, DW_AT_accessibility(DW_ACCESS_public)
+     271              
+     272              $C$DW$20        .dwtag  DW_TAG_member
+     273                      .dwattr $C$DW$20, DW_AT_type(*$C$DW$T$19)
+     274                      .dwattr $C$DW$20, DW_AT_name("AIO14")
+     275                      .dwattr $C$DW$20, DW_AT_TI_symbol_name("_AIO14")
+     276                      .dwattr $C$DW$20, DW_AT_bit_offset(0x01)
+     277                      .dwattr $C$DW$20, DW_AT_bit_size(0x01)
+     278                      .dwattr $C$DW$20, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     279                      .dwattr $C$DW$20, DW_AT_accessibility(DW_ACCESS_public)
+     280              
+     281              $C$DW$21        .dwtag  DW_TAG_member
+     282                      .dwattr $C$DW$21, DW_AT_type(*$C$DW$T$19)
+     283                      .dwattr $C$DW$21, DW_AT_name("rsvd10")
+     284                      .dwattr $C$DW$21, DW_AT_TI_symbol_name("_rsvd10")
+     285                      .dwattr $C$DW$21, DW_AT_bit_offset(0x00)
+     286                      .dwattr $C$DW$21, DW_AT_bit_size(0x01)
+     287                      .dwattr $C$DW$21, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     288                      .dwattr $C$DW$21, DW_AT_accessibility(DW_ACCESS_public)
+     289              
+     290                      .dwendtag $C$DW$T$20
+     291              
+     292              
+     293              $C$DW$T$21      .dwtag  DW_TAG_union_type
+     294                      .dwattr $C$DW$T$21, DW_AT_name("AIODAT_REG")
+     295                      .dwattr $C$DW$T$21, DW_AT_byte_size(0x01)
+     296              $C$DW$22        .dwtag  DW_TAG_member
+     297                      .dwattr $C$DW$22, DW_AT_type(*$C$DW$T$19)
+     298                      .dwattr $C$DW$22, DW_AT_name("all")
+     299                      .dwattr $C$DW$22, DW_AT_TI_symbol_name("_all")
+     300                      .dwattr $C$DW$22, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     301                      .dwattr $C$DW$22, DW_AT_accessibility(DW_ACCESS_public)
+     302              
+     303              $C$DW$23        .dwtag  DW_TAG_member
+     304                      .dwattr $C$DW$23, DW_AT_type(*$C$DW$T$20)
+     305                      .dwattr $C$DW$23, DW_AT_name("bit")
+     306                      .dwattr $C$DW$23, DW_AT_TI_symbol_name("_bit")
+     307                      .dwattr $C$DW$23, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     308                      .dwattr $C$DW$23, DW_AT_accessibility(DW_ACCESS_public)
+     309              
+     310                      .dwendtag $C$DW$T$21
+     311              
+     312              
+     313              $C$DW$T$22      .dwtag  DW_TAG_structure_type
+     314                      .dwattr $C$DW$T$22, DW_AT_name("AIO_BITS")
+     315                      .dwattr $C$DW$T$22, DW_AT_byte_size(0x02)
+     316              $C$DW$24        .dwtag  DW_TAG_member
+     317                      .dwattr $C$DW$24, DW_AT_type(*$C$DW$T$19)
+     318                      .dwattr $C$DW$24, DW_AT_name("rsvd1")
+     319                      .dwattr $C$DW$24, DW_AT_TI_symbol_name("_rsvd1")
+     320                      .dwattr $C$DW$24, DW_AT_bit_offset(0x0e)
+     321                      .dwattr $C$DW$24, DW_AT_bit_size(0x02)
+TMS320C2000 Assembler PC v16.9.6 Tue Mar 06 18:34:40 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Admin\AppData\Local\Temp\{399071AC-28E2-450C-AB44-40EE58F24F3A} PAGE    7
+
+     322                      .dwattr $C$DW$24, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     323                      .dwattr $C$DW$24, DW_AT_accessibility(DW_ACCESS_public)
+     324              
+     325              $C$DW$25        .dwtag  DW_TAG_member
+     326                      .dwattr $C$DW$25, DW_AT_type(*$C$DW$T$19)
+     327                      .dwattr $C$DW$25, DW_AT_name("rsvd2")
+     328                      .dwattr $C$DW$25, DW_AT_TI_symbol_name("_rsvd2")
+     329                      .dwattr $C$DW$25, DW_AT_bit_offset(0x0c)
+     330                      .dwattr $C$DW$25, DW_AT_bit_size(0x02)
+     331                      .dwattr $C$DW$25, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     332                      .dwattr $C$DW$25, DW_AT_accessibility(DW_ACCESS_public)
+     333              
+     334              $C$DW$26        .dwtag  DW_TAG_member
+     335                      .dwattr $C$DW$26, DW_AT_type(*$C$DW$T$19)
+     336                      .dwattr $C$DW$26, DW_AT_name("AIO2")
+     337                      .dwattr $C$DW$26, DW_AT_TI_symbol_name("_AIO2")
+     338                      .dwattr $C$DW$26, DW_AT_bit_offset(0x0a)
+     339                      .dwattr $C$DW$26, DW_AT_bit_size(0x02)
+     340                      .dwattr $C$DW$26, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     341                      .dwattr $C$DW$26, DW_AT_accessibility(DW_ACCESS_public)
+     342              
+     343              $C$DW$27        .dwtag  DW_TAG_member
+     344                      .dwattr $C$DW$27, DW_AT_type(*$C$DW$T$19)
+     345                      .dwattr $C$DW$27, DW_AT_name("rsvd3")
+     346                      .dwattr $C$DW$27, DW_AT_TI_symbol_name("_rsvd3")
+     347                      .dwattr $C$DW$27, DW_AT_bit_offset(0x08)
+     348                      .dwattr $C$DW$27, DW_AT_bit_size(0x02)
+     349                      .dwattr $C$DW$27, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     350                      .dwattr $C$DW$27, DW_AT_accessibility(DW_ACCESS_public)
+     351              
+     352              $C$DW$28        .dwtag  DW_TAG_member
+     353                      .dwattr $C$DW$28, DW_AT_type(*$C$DW$T$19)
+     354                      .dwattr $C$DW$28, DW_AT_name("AIO4")
+     355                      .dwattr $C$DW$28, DW_AT_TI_symbol_name("_AIO4")
+     356                      .dwattr $C$DW$28, DW_AT_bit_offset(0x06)
+     357                      .dwattr $C$DW$28, DW_AT_bit_size(0x02)
+     358                      .dwattr $C$DW$28, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     359                      .dwattr $C$DW$28, DW_AT_accessibility(DW_ACCESS_public)
+     360              
+     361              $C$DW$29        .dwtag  DW_TAG_member
+     362                      .dwattr $C$DW$29, DW_AT_type(*$C$DW$T$19)
+     363                      .dwattr $C$DW$29, DW_AT_name("rsvd4")
+     364                      .dwattr $C$DW$29, DW_AT_TI_symbol_name("_rsvd4")
+     365                      .dwattr $C$DW$29, DW_AT_bit_offset(0x04)
+     366                      .dwattr $C$DW$29, DW_AT_bit_size(0x02)
+     367                      .dwattr $C$DW$29, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     368                      .dwattr $C$DW$29, DW_AT_accessibility(DW_ACCESS_public)
+     369              
+     370              $C$DW$30        .dwtag  DW_TAG_member
+     371                      .dwattr $C$DW$30, DW_AT_type(*$C$DW$T$19)
+     372                      .dwattr $C$DW$30, DW_AT_name("AIO6")
+     373                      .dwattr $C$DW$30, DW_AT_TI_symbol_name("_AIO6")
+     374                      .dwattr $C$DW$30, DW_AT_bit_offset(0x02)
+     375                      .dwattr $C$DW$30, DW_AT_bit_size(0x02)
+     376                      .dwattr $C$DW$30, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+TMS320C2000 Assembler PC v16.9.6 Tue Mar 06 18:34:40 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Admin\AppData\Local\Temp\{399071AC-28E2-450C-AB44-40EE58F24F3A} PAGE    8
+
+     377                      .dwattr $C$DW$30, DW_AT_accessibility(DW_ACCESS_public)
+     378              
+     379              $C$DW$31        .dwtag  DW_TAG_member
+     380                      .dwattr $C$DW$31, DW_AT_type(*$C$DW$T$19)
+     381                      .dwattr $C$DW$31, DW_AT_name("rsvd5")
+     382                      .dwattr $C$DW$31, DW_AT_TI_symbol_name("_rsvd5")
+     383                      .dwattr $C$DW$31, DW_AT_bit_offset(0x00)
+     384                      .dwattr $C$DW$31, DW_AT_bit_size(0x02)
+     385                      .dwattr $C$DW$31, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     386                      .dwattr $C$DW$31, DW_AT_accessibility(DW_ACCESS_public)
+     387              
+     388              $C$DW$32        .dwtag  DW_TAG_member
+     389                      .dwattr $C$DW$32, DW_AT_type(*$C$DW$T$19)
+     390                      .dwattr $C$DW$32, DW_AT_name("rsvd6")
+     391                      .dwattr $C$DW$32, DW_AT_TI_symbol_name("_rsvd6")
+     392                      .dwattr $C$DW$32, DW_AT_bit_offset(0x0e)
+     393                      .dwattr $C$DW$32, DW_AT_bit_size(0x02)
+     394                      .dwattr $C$DW$32, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+     395                      .dwattr $C$DW$32, DW_AT_accessibility(DW_ACCESS_public)
+     396              
+     397              $C$DW$33        .dwtag  DW_TAG_member
+     398                      .dwattr $C$DW$33, DW_AT_type(*$C$DW$T$19)
+     399                      .dwattr $C$DW$33, DW_AT_name("rsvd7")
+     400                      .dwattr $C$DW$33, DW_AT_TI_symbol_name("_rsvd7")
+     401                      .dwattr $C$DW$33, DW_AT_bit_offset(0x0c)
+     402                      .dwattr $C$DW$33, DW_AT_bit_size(0x02)
+     403                      .dwattr $C$DW$33, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+     404                      .dwattr $C$DW$33, DW_AT_accessibility(DW_ACCESS_public)
+     405              
+     406              $C$DW$34        .dwtag  DW_TAG_member
+     407                      .dwattr $C$DW$34, DW_AT_type(*$C$DW$T$19)
+     408                      .dwattr $C$DW$34, DW_AT_name("AIO10")
+     409                      .dwattr $C$DW$34, DW_AT_TI_symbol_name("_AIO10")
+     410                      .dwattr $C$DW$34, DW_AT_bit_offset(0x0a)
+     411                      .dwattr $C$DW$34, DW_AT_bit_size(0x02)
+     412                      .dwattr $C$DW$34, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+     413                      .dwattr $C$DW$34, DW_AT_accessibility(DW_ACCESS_public)
+     414              
+     415              $C$DW$35        .dwtag  DW_TAG_member
+     416                      .dwattr $C$DW$35, DW_AT_type(*$C$DW$T$19)
+     417                      .dwattr $C$DW$35, DW_AT_name("rsvd8")
+     418                      .dwattr $C$DW$35, DW_AT_TI_symbol_name("_rsvd8")
+     419                      .dwattr $C$DW$35, DW_AT_bit_offset(0x08)
+     420                      .dwattr $C$DW$35, DW_AT_bit_size(0x02)
+     421                      .dwattr $C$DW$35, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+     422                      .dwattr $C$DW$35, DW_AT_accessibility(DW_ACCESS_public)
+     423              
+     424              $C$DW$36        .dwtag  DW_TAG_member
+     425                      .dwattr $C$DW$36, DW_AT_type(*$C$DW$T$19)
+     426                      .dwattr $C$DW$36, DW_AT_name("AIO12")
+     427                      .dwattr $C$DW$36, DW_AT_TI_symbol_name("_AIO12")
+     428                      .dwattr $C$DW$36, DW_AT_bit_offset(0x06)
+     429                      .dwattr $C$DW$36, DW_AT_bit_size(0x02)
+     430                      .dwattr $C$DW$36, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+     431                      .dwattr $C$DW$36, DW_AT_accessibility(DW_ACCESS_public)
+TMS320C2000 Assembler PC v16.9.6 Tue Mar 06 18:34:40 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Admin\AppData\Local\Temp\{399071AC-28E2-450C-AB44-40EE58F24F3A} PAGE    9
+
+     432              
+     433              $C$DW$37        .dwtag  DW_TAG_member
+     434                      .dwattr $C$DW$37, DW_AT_type(*$C$DW$T$19)
+     435                      .dwattr $C$DW$37, DW_AT_name("rsvd9")
+     436                      .dwattr $C$DW$37, DW_AT_TI_symbol_name("_rsvd9")
+     437                      .dwattr $C$DW$37, DW_AT_bit_offset(0x04)
+     438                      .dwattr $C$DW$37, DW_AT_bit_size(0x02)
+     439                      .dwattr $C$DW$37, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+     440                      .dwattr $C$DW$37, DW_AT_accessibility(DW_ACCESS_public)
+     441              
+     442              $C$DW$38        .dwtag  DW_TAG_member
+     443                      .dwattr $C$DW$38, DW_AT_type(*$C$DW$T$19)
+     444                      .dwattr $C$DW$38, DW_AT_name("AIO14")
+     445                      .dwattr $C$DW$38, DW_AT_TI_symbol_name("_AIO14")
+     446                      .dwattr $C$DW$38, DW_AT_bit_offset(0x02)
+     447                      .dwattr $C$DW$38, DW_AT_bit_size(0x02)
+     448                      .dwattr $C$DW$38, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+     449                      .dwattr $C$DW$38, DW_AT_accessibility(DW_ACCESS_public)
+     450              
+     451              $C$DW$39        .dwtag  DW_TAG_member
+     452                      .dwattr $C$DW$39, DW_AT_type(*$C$DW$T$19)
+     453                      .dwattr $C$DW$39, DW_AT_name("rsvd10")
+     454                      .dwattr $C$DW$39, DW_AT_TI_symbol_name("_rsvd10")
+     455                      .dwattr $C$DW$39, DW_AT_bit_offset(0x00)
+     456                      .dwattr $C$DW$39, DW_AT_bit_size(0x02)
+     457                      .dwattr $C$DW$39, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+     458                      .dwattr $C$DW$39, DW_AT_accessibility(DW_ACCESS_public)
+     459              
+     460                      .dwendtag $C$DW$T$22
+     461              
+     462              
+     463              $C$DW$T$24      .dwtag  DW_TAG_union_type
+     464                      .dwattr $C$DW$T$24, DW_AT_name("AIO_REG")
+     465                      .dwattr $C$DW$T$24, DW_AT_byte_size(0x02)
+     466              $C$DW$40        .dwtag  DW_TAG_member
+     467                      .dwattr $C$DW$40, DW_AT_type(*$C$DW$T$23)
+     468                      .dwattr $C$DW$40, DW_AT_name("all")
+     469                      .dwattr $C$DW$40, DW_AT_TI_symbol_name("_all")
+     470                      .dwattr $C$DW$40, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     471                      .dwattr $C$DW$40, DW_AT_accessibility(DW_ACCESS_public)
+     472              
+     473              $C$DW$41        .dwtag  DW_TAG_member
+     474                      .dwattr $C$DW$41, DW_AT_type(*$C$DW$T$22)
+     475                      .dwattr $C$DW$41, DW_AT_name("bit")
+     476                      .dwattr $C$DW$41, DW_AT_TI_symbol_name("_bit")
+     477                      .dwattr $C$DW$41, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     478                      .dwattr $C$DW$41, DW_AT_accessibility(DW_ACCESS_public)
+     479              
+     480                      .dwendtag $C$DW$T$24
+     481              
+     482              
+     483              $C$DW$T$25      .dwtag  DW_TAG_structure_type
+     484                      .dwattr $C$DW$T$25, DW_AT_name("GPA1_BITS")
+     485                      .dwattr $C$DW$T$25, DW_AT_byte_size(0x02)
+     486              $C$DW$42        .dwtag  DW_TAG_member
+TMS320C2000 Assembler PC v16.9.6 Tue Mar 06 18:34:40 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Admin\AppData\Local\Temp\{399071AC-28E2-450C-AB44-40EE58F24F3A} PAGE   10
+
+     487                      .dwattr $C$DW$42, DW_AT_type(*$C$DW$T$19)
+     488                      .dwattr $C$DW$42, DW_AT_name("GPIO0")
+     489                      .dwattr $C$DW$42, DW_AT_TI_symbol_name("_GPIO0")
+     490                      .dwattr $C$DW$42, DW_AT_bit_offset(0x0e)
+     491                      .dwattr $C$DW$42, DW_AT_bit_size(0x02)
+     492                      .dwattr $C$DW$42, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     493                      .dwattr $C$DW$42, DW_AT_accessibility(DW_ACCESS_public)
+     494              
+     495              $C$DW$43        .dwtag  DW_TAG_member
+     496                      .dwattr $C$DW$43, DW_AT_type(*$C$DW$T$19)
+     497                      .dwattr $C$DW$43, DW_AT_name("GPIO1")
+     498                      .dwattr $C$DW$43, DW_AT_TI_symbol_name("_GPIO1")
+     499                      .dwattr $C$DW$43, DW_AT_bit_offset(0x0c)
+     500                      .dwattr $C$DW$43, DW_AT_bit_size(0x02)
+     501                      .dwattr $C$DW$43, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     502                      .dwattr $C$DW$43, DW_AT_accessibility(DW_ACCESS_public)
+     503              
+     504              $C$DW$44        .dwtag  DW_TAG_member
+     505                      .dwattr $C$DW$44, DW_AT_type(*$C$DW$T$19)
+     506                      .dwattr $C$DW$44, DW_AT_name("GPIO2")
+     507                      .dwattr $C$DW$44, DW_AT_TI_symbol_name("_GPIO2")
+     508                      .dwattr $C$DW$44, DW_AT_bit_offset(0x0a)
+     509                      .dwattr $C$DW$44, DW_AT_bit_size(0x02)
+     510                      .dwattr $C$DW$44, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     511                      .dwattr $C$DW$44, DW_AT_accessibility(DW_ACCESS_public)
+     512              
+     513              $C$DW$45        .dwtag  DW_TAG_member
+     514                      .dwattr $C$DW$45, DW_AT_type(*$C$DW$T$19)
+     515                      .dwattr $C$DW$45, DW_AT_name("GPIO3")
+     516                      .dwattr $C$DW$45, DW_AT_TI_symbol_name("_GPIO3")
+     517                      .dwattr $C$DW$45, DW_AT_bit_offset(0x08)
+     518                      .dwattr $C$DW$45, DW_AT_bit_size(0x02)
+     519                      .dwattr $C$DW$45, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     520                      .dwattr $C$DW$45, DW_AT_accessibility(DW_ACCESS_public)
+     521              
+     522              $C$DW$46        .dwtag  DW_TAG_member
+     523                      .dwattr $C$DW$46, DW_AT_type(*$C$DW$T$19)
+     524                      .dwattr $C$DW$46, DW_AT_name("GPIO4")
+     525                      .dwattr $C$DW$46, DW_AT_TI_symbol_name("_GPIO4")
+     526                      .dwattr $C$DW$46, DW_AT_bit_offset(0x06)
+     527                      .dwattr $C$DW$46, DW_AT_bit_size(0x02)
+     528                      .dwattr $C$DW$46, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     529                      .dwattr $C$DW$46, DW_AT_accessibility(DW_ACCESS_public)
+     530              
+     531              $C$DW$47        .dwtag  DW_TAG_member
+     532                      .dwattr $C$DW$47, DW_AT_type(*$C$DW$T$19)
+     533                      .dwattr $C$DW$47, DW_AT_name("GPIO5")
+     534                      .dwattr $C$DW$47, DW_AT_TI_symbol_name("_GPIO5")
+     535                      .dwattr $C$DW$47, DW_AT_bit_offset(0x04)
+     536                      .dwattr $C$DW$47, DW_AT_bit_size(0x02)
+     537                      .dwattr $C$DW$47, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     538                      .dwattr $C$DW$47, DW_AT_accessibility(DW_ACCESS_public)
+     539              
+     540              $C$DW$48        .dwtag  DW_TAG_member
+     541                      .dwattr $C$DW$48, DW_AT_type(*$C$DW$T$19)
+TMS320C2000 Assembler PC v16.9.6 Tue Mar 06 18:34:40 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Admin\AppData\Local\Temp\{399071AC-28E2-450C-AB44-40EE58F24F3A} PAGE   11
+
+     542                      .dwattr $C$DW$48, DW_AT_name("GPIO6")
+     543                      .dwattr $C$DW$48, DW_AT_TI_symbol_name("_GPIO6")
+     544                      .dwattr $C$DW$48, DW_AT_bit_offset(0x02)
+     545                      .dwattr $C$DW$48, DW_AT_bit_size(0x02)
+     546                      .dwattr $C$DW$48, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     547                      .dwattr $C$DW$48, DW_AT_accessibility(DW_ACCESS_public)
+     548              
+     549              $C$DW$49        .dwtag  DW_TAG_member
+     550                      .dwattr $C$DW$49, DW_AT_type(*$C$DW$T$19)
+     551                      .dwattr $C$DW$49, DW_AT_name("GPIO7")
+     552                      .dwattr $C$DW$49, DW_AT_TI_symbol_name("_GPIO7")
+     553                      .dwattr $C$DW$49, DW_AT_bit_offset(0x00)
+     554                      .dwattr $C$DW$49, DW_AT_bit_size(0x02)
+     555                      .dwattr $C$DW$49, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     556                      .dwattr $C$DW$49, DW_AT_accessibility(DW_ACCESS_public)
+     557              
+     558              $C$DW$50        .dwtag  DW_TAG_member
+     559                      .dwattr $C$DW$50, DW_AT_type(*$C$DW$T$19)
+     560                      .dwattr $C$DW$50, DW_AT_name("GPIO8")
+     561                      .dwattr $C$DW$50, DW_AT_TI_symbol_name("_GPIO8")
+     562                      .dwattr $C$DW$50, DW_AT_bit_offset(0x0e)
+     563                      .dwattr $C$DW$50, DW_AT_bit_size(0x02)
+     564                      .dwattr $C$DW$50, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+     565                      .dwattr $C$DW$50, DW_AT_accessibility(DW_ACCESS_public)
+     566              
+     567              $C$DW$51        .dwtag  DW_TAG_member
+     568                      .dwattr $C$DW$51, DW_AT_type(*$C$DW$T$19)
+     569                      .dwattr $C$DW$51, DW_AT_name("GPIO9")
+     570                      .dwattr $C$DW$51, DW_AT_TI_symbol_name("_GPIO9")
+     571                      .dwattr $C$DW$51, DW_AT_bit_offset(0x0c)
+     572                      .dwattr $C$DW$51, DW_AT_bit_size(0x02)
+     573                      .dwattr $C$DW$51, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+     574                      .dwattr $C$DW$51, DW_AT_accessibility(DW_ACCESS_public)
+     575              
+     576              $C$DW$52        .dwtag  DW_TAG_member
+     577                      .dwattr $C$DW$52, DW_AT_type(*$C$DW$T$19)
+     578                      .dwattr $C$DW$52, DW_AT_name("GPIO10")
+     579                      .dwattr $C$DW$52, DW_AT_TI_symbol_name("_GPIO10")
+     580                      .dwattr $C$DW$52, DW_AT_bit_offset(0x0a)
+     581                      .dwattr $C$DW$52, DW_AT_bit_size(0x02)
+     582                      .dwattr $C$DW$52, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+     583                      .dwattr $C$DW$52, DW_AT_accessibility(DW_ACCESS_public)
+     584              
+     585              $C$DW$53        .dwtag  DW_TAG_member
+     586                      .dwattr $C$DW$53, DW_AT_type(*$C$DW$T$19)
+     587                      .dwattr $C$DW$53, DW_AT_name("GPIO11")
+     588                      .dwattr $C$DW$53, DW_AT_TI_symbol_name("_GPIO11")
+     589                      .dwattr $C$DW$53, DW_AT_bit_offset(0x08)
+     590                      .dwattr $C$DW$53, DW_AT_bit_size(0x02)
+     591                      .dwattr $C$DW$53, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+     592                      .dwattr $C$DW$53, DW_AT_accessibility(DW_ACCESS_public)
+     593              
+     594              $C$DW$54        .dwtag  DW_TAG_member
+     595                      .dwattr $C$DW$54, DW_AT_type(*$C$DW$T$19)
+     596                      .dwattr $C$DW$54, DW_AT_name("GPIO12")
+TMS320C2000 Assembler PC v16.9.6 Tue Mar 06 18:34:40 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Admin\AppData\Local\Temp\{399071AC-28E2-450C-AB44-40EE58F24F3A} PAGE   12
+
+     597                      .dwattr $C$DW$54, DW_AT_TI_symbol_name("_GPIO12")
+     598                      .dwattr $C$DW$54, DW_AT_bit_offset(0x06)
+     599                      .dwattr $C$DW$54, DW_AT_bit_size(0x02)
+     600                      .dwattr $C$DW$54, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+     601                      .dwattr $C$DW$54, DW_AT_accessibility(DW_ACCESS_public)
+     602              
+     603              $C$DW$55        .dwtag  DW_TAG_member
+     604                      .dwattr $C$DW$55, DW_AT_type(*$C$DW$T$19)
+     605                      .dwattr $C$DW$55, DW_AT_name("GPIO13")
+     606                      .dwattr $C$DW$55, DW_AT_TI_symbol_name("_GPIO13")
+     607                      .dwattr $C$DW$55, DW_AT_bit_offset(0x04)
+     608                      .dwattr $C$DW$55, DW_AT_bit_size(0x02)
+     609                      .dwattr $C$DW$55, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+     610                      .dwattr $C$DW$55, DW_AT_accessibility(DW_ACCESS_public)
+     611              
+     612              $C$DW$56        .dwtag  DW_TAG_member
+     613                      .dwattr $C$DW$56, DW_AT_type(*$C$DW$T$19)
+     614                      .dwattr $C$DW$56, DW_AT_name("GPIO14")
+     615                      .dwattr $C$DW$56, DW_AT_TI_symbol_name("_GPIO14")
+     616                      .dwattr $C$DW$56, DW_AT_bit_offset(0x02)
+     617                      .dwattr $C$DW$56, DW_AT_bit_size(0x02)
+     618                      .dwattr $C$DW$56, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+     619                      .dwattr $C$DW$56, DW_AT_accessibility(DW_ACCESS_public)
+     620              
+     621              $C$DW$57        .dwtag  DW_TAG_member
+     622                      .dwattr $C$DW$57, DW_AT_type(*$C$DW$T$19)
+     623                      .dwattr $C$DW$57, DW_AT_name("GPIO15")
+     624                      .dwattr $C$DW$57, DW_AT_TI_symbol_name("_GPIO15")
+     625                      .dwattr $C$DW$57, DW_AT_bit_offset(0x00)
+     626                      .dwattr $C$DW$57, DW_AT_bit_size(0x02)
+     627                      .dwattr $C$DW$57, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+     628                      .dwattr $C$DW$57, DW_AT_accessibility(DW_ACCESS_public)
+     629              
+     630                      .dwendtag $C$DW$T$25
+     631              
+     632              
+     633              $C$DW$T$26      .dwtag  DW_TAG_union_type
+     634                      .dwattr $C$DW$T$26, DW_AT_name("GPA1_REG")
+     635                      .dwattr $C$DW$T$26, DW_AT_byte_size(0x02)
+     636              $C$DW$58        .dwtag  DW_TAG_member
+     637                      .dwattr $C$DW$58, DW_AT_type(*$C$DW$T$23)
+     638                      .dwattr $C$DW$58, DW_AT_name("all")
+     639                      .dwattr $C$DW$58, DW_AT_TI_symbol_name("_all")
+     640                      .dwattr $C$DW$58, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     641                      .dwattr $C$DW$58, DW_AT_accessibility(DW_ACCESS_public)
+     642              
+     643              $C$DW$59        .dwtag  DW_TAG_member
+     644                      .dwattr $C$DW$59, DW_AT_type(*$C$DW$T$25)
+     645                      .dwattr $C$DW$59, DW_AT_name("bit")
+     646                      .dwattr $C$DW$59, DW_AT_TI_symbol_name("_bit")
+     647                      .dwattr $C$DW$59, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     648                      .dwattr $C$DW$59, DW_AT_accessibility(DW_ACCESS_public)
+     649              
+     650                      .dwendtag $C$DW$T$26
+     651              
+TMS320C2000 Assembler PC v16.9.6 Tue Mar 06 18:34:40 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Admin\AppData\Local\Temp\{399071AC-28E2-450C-AB44-40EE58F24F3A} PAGE   13
+
+     652              
+     653              $C$DW$T$27      .dwtag  DW_TAG_structure_type
+     654                      .dwattr $C$DW$T$27, DW_AT_name("GPA2_BITS")
+     655                      .dwattr $C$DW$T$27, DW_AT_byte_size(0x02)
+     656              $C$DW$60        .dwtag  DW_TAG_member
+     657                      .dwattr $C$DW$60, DW_AT_type(*$C$DW$T$19)
+     658                      .dwattr $C$DW$60, DW_AT_name("GPIO16")
+     659                      .dwattr $C$DW$60, DW_AT_TI_symbol_name("_GPIO16")
+     660                      .dwattr $C$DW$60, DW_AT_bit_offset(0x0e)
+     661                      .dwattr $C$DW$60, DW_AT_bit_size(0x02)
+     662                      .dwattr $C$DW$60, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     663                      .dwattr $C$DW$60, DW_AT_accessibility(DW_ACCESS_public)
+     664              
+     665              $C$DW$61        .dwtag  DW_TAG_member
+     666                      .dwattr $C$DW$61, DW_AT_type(*$C$DW$T$19)
+     667                      .dwattr $C$DW$61, DW_AT_name("GPIO17")
+     668                      .dwattr $C$DW$61, DW_AT_TI_symbol_name("_GPIO17")
+     669                      .dwattr $C$DW$61, DW_AT_bit_offset(0x0c)
+     670                      .dwattr $C$DW$61, DW_AT_bit_size(0x02)
+     671                      .dwattr $C$DW$61, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     672                      .dwattr $C$DW$61, DW_AT_accessibility(DW_ACCESS_public)
+     673              
+     674              $C$DW$62        .dwtag  DW_TAG_member
+     675                      .dwattr $C$DW$62, DW_AT_type(*$C$DW$T$19)
+     676                      .dwattr $C$DW$62, DW_AT_name("GPIO18")
+     677                      .dwattr $C$DW$62, DW_AT_TI_symbol_name("_GPIO18")
+     678                      .dwattr $C$DW$62, DW_AT_bit_offset(0x0a)
+     679                      .dwattr $C$DW$62, DW_AT_bit_size(0x02)
+     680                      .dwattr $C$DW$62, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     681                      .dwattr $C$DW$62, DW_AT_accessibility(DW_ACCESS_public)
+     682              
+     683              $C$DW$63        .dwtag  DW_TAG_member
+     684                      .dwattr $C$DW$63, DW_AT_type(*$C$DW$T$19)
+     685                      .dwattr $C$DW$63, DW_AT_name("GPIO19")
+     686                      .dwattr $C$DW$63, DW_AT_TI_symbol_name("_GPIO19")
+     687                      .dwattr $C$DW$63, DW_AT_bit_offset(0x08)
+     688                      .dwattr $C$DW$63, DW_AT_bit_size(0x02)
+     689                      .dwattr $C$DW$63, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     690                      .dwattr $C$DW$63, DW_AT_accessibility(DW_ACCESS_public)
+     691              
+     692              $C$DW$64        .dwtag  DW_TAG_member
+     693                      .dwattr $C$DW$64, DW_AT_type(*$C$DW$T$19)
+     694                      .dwattr $C$DW$64, DW_AT_name("GPIO20")
+     695                      .dwattr $C$DW$64, DW_AT_TI_symbol_name("_GPIO20")
+     696                      .dwattr $C$DW$64, DW_AT_bit_offset(0x06)
+     697                      .dwattr $C$DW$64, DW_AT_bit_size(0x02)
+     698                      .dwattr $C$DW$64, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     699                      .dwattr $C$DW$64, DW_AT_accessibility(DW_ACCESS_public)
+     700              
+     701              $C$DW$65        .dwtag  DW_TAG_member
+     702                      .dwattr $C$DW$65, DW_AT_type(*$C$DW$T$19)
+     703                      .dwattr $C$DW$65, DW_AT_name("GPIO21")
+     704                      .dwattr $C$DW$65, DW_AT_TI_symbol_name("_GPIO21")
+     705                      .dwattr $C$DW$65, DW_AT_bit_offset(0x04)
+     706                      .dwattr $C$DW$65, DW_AT_bit_size(0x02)
+TMS320C2000 Assembler PC v16.9.6 Tue Mar 06 18:34:40 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Admin\AppData\Local\Temp\{399071AC-28E2-450C-AB44-40EE58F24F3A} PAGE   14
+
+     707                      .dwattr $C$DW$65, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     708                      .dwattr $C$DW$65, DW_AT_accessibility(DW_ACCESS_public)
+     709              
+     710              $C$DW$66        .dwtag  DW_TAG_member
+     711                      .dwattr $C$DW$66, DW_AT_type(*$C$DW$T$19)
+     712                      .dwattr $C$DW$66, DW_AT_name("GPIO22")
+     713                      .dwattr $C$DW$66, DW_AT_TI_symbol_name("_GPIO22")
+     714                      .dwattr $C$DW$66, DW_AT_bit_offset(0x02)
+     715                      .dwattr $C$DW$66, DW_AT_bit_size(0x02)
+     716                      .dwattr $C$DW$66, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     717                      .dwattr $C$DW$66, DW_AT_accessibility(DW_ACCESS_public)
+     718              
+     719              $C$DW$67        .dwtag  DW_TAG_member
+     720                      .dwattr $C$DW$67, DW_AT_type(*$C$DW$T$19)
+     721                      .dwattr $C$DW$67, DW_AT_name("GPIO23")
+     722                      .dwattr $C$DW$67, DW_AT_TI_symbol_name("_GPIO23")
+     723                      .dwattr $C$DW$67, DW_AT_bit_offset(0x00)
+     724                      .dwattr $C$DW$67, DW_AT_bit_size(0x02)
+     725                      .dwattr $C$DW$67, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     726                      .dwattr $C$DW$67, DW_AT_accessibility(DW_ACCESS_public)
+     727              
+     728              $C$DW$68        .dwtag  DW_TAG_member
+     729                      .dwattr $C$DW$68, DW_AT_type(*$C$DW$T$19)
+     730                      .dwattr $C$DW$68, DW_AT_name("GPIO24")
+     731                      .dwattr $C$DW$68, DW_AT_TI_symbol_name("_GPIO24")
+     732                      .dwattr $C$DW$68, DW_AT_bit_offset(0x0e)
+     733                      .dwattr $C$DW$68, DW_AT_bit_size(0x02)
+     734                      .dwattr $C$DW$68, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+     735                      .dwattr $C$DW$68, DW_AT_accessibility(DW_ACCESS_public)
+     736              
+     737              $C$DW$69        .dwtag  DW_TAG_member
+     738                      .dwattr $C$DW$69, DW_AT_type(*$C$DW$T$19)
+     739                      .dwattr $C$DW$69, DW_AT_name("GPIO25")
+     740                      .dwattr $C$DW$69, DW_AT_TI_symbol_name("_GPIO25")
+     741                      .dwattr $C$DW$69, DW_AT_bit_offset(0x0c)
+     742                      .dwattr $C$DW$69, DW_AT_bit_size(0x02)
+     743                      .dwattr $C$DW$69, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+     744                      .dwattr $C$DW$69, DW_AT_accessibility(DW_ACCESS_public)
+     745              
+     746              $C$DW$70        .dwtag  DW_TAG_member
+     747                      .dwattr $C$DW$70, DW_AT_type(*$C$DW$T$19)
+     748                      .dwattr $C$DW$70, DW_AT_name("GPIO26")
+     749                      .dwattr $C$DW$70, DW_AT_TI_symbol_name("_GPIO26")
+     750                      .dwattr $C$DW$70, DW_AT_bit_offset(0x0a)
+     751                      .dwattr $C$DW$70, DW_AT_bit_size(0x02)
+     752                      .dwattr $C$DW$70, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+     753                      .dwattr $C$DW$70, DW_AT_accessibility(DW_ACCESS_public)
+     754              
+     755              $C$DW$71        .dwtag  DW_TAG_member
+     756                      .dwattr $C$DW$71, DW_AT_type(*$C$DW$T$19)
+     757                      .dwattr $C$DW$71, DW_AT_name("GPIO27")
+     758                      .dwattr $C$DW$71, DW_AT_TI_symbol_name("_GPIO27")
+     759                      .dwattr $C$DW$71, DW_AT_bit_offset(0x08)
+     760                      .dwattr $C$DW$71, DW_AT_bit_size(0x02)
+     761                      .dwattr $C$DW$71, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+TMS320C2000 Assembler PC v16.9.6 Tue Mar 06 18:34:40 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Admin\AppData\Local\Temp\{399071AC-28E2-450C-AB44-40EE58F24F3A} PAGE   15
+
+     762                      .dwattr $C$DW$71, DW_AT_accessibility(DW_ACCESS_public)
+     763              
+     764              $C$DW$72        .dwtag  DW_TAG_member
+     765                      .dwattr $C$DW$72, DW_AT_type(*$C$DW$T$19)
+     766                      .dwattr $C$DW$72, DW_AT_name("GPIO28")
+     767                      .dwattr $C$DW$72, DW_AT_TI_symbol_name("_GPIO28")
+     768                      .dwattr $C$DW$72, DW_AT_bit_offset(0x06)
+     769                      .dwattr $C$DW$72, DW_AT_bit_size(0x02)
+     770                      .dwattr $C$DW$72, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+     771                      .dwattr $C$DW$72, DW_AT_accessibility(DW_ACCESS_public)
+     772              
+     773              $C$DW$73        .dwtag  DW_TAG_member
+     774                      .dwattr $C$DW$73, DW_AT_type(*$C$DW$T$19)
+     775                      .dwattr $C$DW$73, DW_AT_name("GPIO29")
+     776                      .dwattr $C$DW$73, DW_AT_TI_symbol_name("_GPIO29")
+     777                      .dwattr $C$DW$73, DW_AT_bit_offset(0x04)
+     778                      .dwattr $C$DW$73, DW_AT_bit_size(0x02)
+     779                      .dwattr $C$DW$73, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+     780                      .dwattr $C$DW$73, DW_AT_accessibility(DW_ACCESS_public)
+     781              
+     782              $C$DW$74        .dwtag  DW_TAG_member
+     783                      .dwattr $C$DW$74, DW_AT_type(*$C$DW$T$19)
+     784                      .dwattr $C$DW$74, DW_AT_name("GPIO30")
+     785                      .dwattr $C$DW$74, DW_AT_TI_symbol_name("_GPIO30")
+     786                      .dwattr $C$DW$74, DW_AT_bit_offset(0x02)
+     787                      .dwattr $C$DW$74, DW_AT_bit_size(0x02)
+     788                      .dwattr $C$DW$74, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+     789                      .dwattr $C$DW$74, DW_AT_accessibility(DW_ACCESS_public)
+     790              
+     791              $C$DW$75        .dwtag  DW_TAG_member
+     792                      .dwattr $C$DW$75, DW_AT_type(*$C$DW$T$19)
+     793                      .dwattr $C$DW$75, DW_AT_name("GPIO31")
+     794                      .dwattr $C$DW$75, DW_AT_TI_symbol_name("_GPIO31")
+     795                      .dwattr $C$DW$75, DW_AT_bit_offset(0x00)
+     796                      .dwattr $C$DW$75, DW_AT_bit_size(0x02)
+     797                      .dwattr $C$DW$75, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+     798                      .dwattr $C$DW$75, DW_AT_accessibility(DW_ACCESS_public)
+     799              
+     800                      .dwendtag $C$DW$T$27
+     801              
+     802              
+     803              $C$DW$T$28      .dwtag  DW_TAG_union_type
+     804                      .dwattr $C$DW$T$28, DW_AT_name("GPA2_REG")
+     805                      .dwattr $C$DW$T$28, DW_AT_byte_size(0x02)
+     806              $C$DW$76        .dwtag  DW_TAG_member
+     807                      .dwattr $C$DW$76, DW_AT_type(*$C$DW$T$23)
+     808                      .dwattr $C$DW$76, DW_AT_name("all")
+     809                      .dwattr $C$DW$76, DW_AT_TI_symbol_name("_all")
+     810                      .dwattr $C$DW$76, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     811                      .dwattr $C$DW$76, DW_AT_accessibility(DW_ACCESS_public)
+     812              
+     813              $C$DW$77        .dwtag  DW_TAG_member
+     814                      .dwattr $C$DW$77, DW_AT_type(*$C$DW$T$27)
+     815                      .dwattr $C$DW$77, DW_AT_name("bit")
+     816                      .dwattr $C$DW$77, DW_AT_TI_symbol_name("_bit")
+TMS320C2000 Assembler PC v16.9.6 Tue Mar 06 18:34:40 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Admin\AppData\Local\Temp\{399071AC-28E2-450C-AB44-40EE58F24F3A} PAGE   16
+
+     817                      .dwattr $C$DW$77, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     818                      .dwattr $C$DW$77, DW_AT_accessibility(DW_ACCESS_public)
+     819              
+     820                      .dwendtag $C$DW$T$28
+     821              
+     822              
+     823              $C$DW$T$29      .dwtag  DW_TAG_structure_type
+     824                      .dwattr $C$DW$T$29, DW_AT_name("GPACTRL_BITS")
+     825                      .dwattr $C$DW$T$29, DW_AT_byte_size(0x02)
+     826              $C$DW$78        .dwtag  DW_TAG_member
+     827                      .dwattr $C$DW$78, DW_AT_type(*$C$DW$T$19)
+     828                      .dwattr $C$DW$78, DW_AT_name("QUALPRD0")
+     829                      .dwattr $C$DW$78, DW_AT_TI_symbol_name("_QUALPRD0")
+     830                      .dwattr $C$DW$78, DW_AT_bit_offset(0x08)
+     831                      .dwattr $C$DW$78, DW_AT_bit_size(0x08)
+     832                      .dwattr $C$DW$78, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     833                      .dwattr $C$DW$78, DW_AT_accessibility(DW_ACCESS_public)
+     834              
+     835              $C$DW$79        .dwtag  DW_TAG_member
+     836                      .dwattr $C$DW$79, DW_AT_type(*$C$DW$T$19)
+     837                      .dwattr $C$DW$79, DW_AT_name("QUALPRD1")
+     838                      .dwattr $C$DW$79, DW_AT_TI_symbol_name("_QUALPRD1")
+     839                      .dwattr $C$DW$79, DW_AT_bit_offset(0x00)
+     840                      .dwattr $C$DW$79, DW_AT_bit_size(0x08)
+     841                      .dwattr $C$DW$79, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     842                      .dwattr $C$DW$79, DW_AT_accessibility(DW_ACCESS_public)
+     843              
+     844              $C$DW$80        .dwtag  DW_TAG_member
+     845                      .dwattr $C$DW$80, DW_AT_type(*$C$DW$T$19)
+     846                      .dwattr $C$DW$80, DW_AT_name("QUALPRD2")
+     847                      .dwattr $C$DW$80, DW_AT_TI_symbol_name("_QUALPRD2")
+     848                      .dwattr $C$DW$80, DW_AT_bit_offset(0x08)
+     849                      .dwattr $C$DW$80, DW_AT_bit_size(0x08)
+     850                      .dwattr $C$DW$80, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+     851                      .dwattr $C$DW$80, DW_AT_accessibility(DW_ACCESS_public)
+     852              
+     853              $C$DW$81        .dwtag  DW_TAG_member
+     854                      .dwattr $C$DW$81, DW_AT_type(*$C$DW$T$19)
+     855                      .dwattr $C$DW$81, DW_AT_name("QUALPRD3")
+     856                      .dwattr $C$DW$81, DW_AT_TI_symbol_name("_QUALPRD3")
+     857                      .dwattr $C$DW$81, DW_AT_bit_offset(0x00)
+     858                      .dwattr $C$DW$81, DW_AT_bit_size(0x08)
+     859                      .dwattr $C$DW$81, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+     860                      .dwattr $C$DW$81, DW_AT_accessibility(DW_ACCESS_public)
+     861              
+     862                      .dwendtag $C$DW$T$29
+     863              
+     864              
+     865              $C$DW$T$30      .dwtag  DW_TAG_union_type
+     866                      .dwattr $C$DW$T$30, DW_AT_name("GPACTRL_REG")
+     867                      .dwattr $C$DW$T$30, DW_AT_byte_size(0x02)
+     868              $C$DW$82        .dwtag  DW_TAG_member
+     869                      .dwattr $C$DW$82, DW_AT_type(*$C$DW$T$23)
+     870                      .dwattr $C$DW$82, DW_AT_name("all")
+     871                      .dwattr $C$DW$82, DW_AT_TI_symbol_name("_all")
+TMS320C2000 Assembler PC v16.9.6 Tue Mar 06 18:34:40 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Admin\AppData\Local\Temp\{399071AC-28E2-450C-AB44-40EE58F24F3A} PAGE   17
+
+     872                      .dwattr $C$DW$82, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     873                      .dwattr $C$DW$82, DW_AT_accessibility(DW_ACCESS_public)
+     874              
+     875              $C$DW$83        .dwtag  DW_TAG_member
+     876                      .dwattr $C$DW$83, DW_AT_type(*$C$DW$T$29)
+     877                      .dwattr $C$DW$83, DW_AT_name("bit")
+     878                      .dwattr $C$DW$83, DW_AT_TI_symbol_name("_bit")
+     879                      .dwattr $C$DW$83, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     880                      .dwattr $C$DW$83, DW_AT_accessibility(DW_ACCESS_public)
+     881              
+     882                      .dwendtag $C$DW$T$30
+     883              
+     884              
+     885              $C$DW$T$31      .dwtag  DW_TAG_structure_type
+     886                      .dwattr $C$DW$T$31, DW_AT_name("GPADAT_BITS")
+     887                      .dwattr $C$DW$T$31, DW_AT_byte_size(0x02)
+     888              $C$DW$84        .dwtag  DW_TAG_member
+     889                      .dwattr $C$DW$84, DW_AT_type(*$C$DW$T$19)
+     890                      .dwattr $C$DW$84, DW_AT_name("GPIO0")
+     891                      .dwattr $C$DW$84, DW_AT_TI_symbol_name("_GPIO0")
+     892                      .dwattr $C$DW$84, DW_AT_bit_offset(0x0f)
+     893                      .dwattr $C$DW$84, DW_AT_bit_size(0x01)
+     894                      .dwattr $C$DW$84, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     895                      .dwattr $C$DW$84, DW_AT_accessibility(DW_ACCESS_public)
+     896              
+     897              $C$DW$85        .dwtag  DW_TAG_member
+     898                      .dwattr $C$DW$85, DW_AT_type(*$C$DW$T$19)
+     899                      .dwattr $C$DW$85, DW_AT_name("GPIO1")
+     900                      .dwattr $C$DW$85, DW_AT_TI_symbol_name("_GPIO1")
+     901                      .dwattr $C$DW$85, DW_AT_bit_offset(0x0e)
+     902                      .dwattr $C$DW$85, DW_AT_bit_size(0x01)
+     903                      .dwattr $C$DW$85, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     904                      .dwattr $C$DW$85, DW_AT_accessibility(DW_ACCESS_public)
+     905              
+     906              $C$DW$86        .dwtag  DW_TAG_member
+     907                      .dwattr $C$DW$86, DW_AT_type(*$C$DW$T$19)
+     908                      .dwattr $C$DW$86, DW_AT_name("GPIO2")
+     909                      .dwattr $C$DW$86, DW_AT_TI_symbol_name("_GPIO2")
+     910                      .dwattr $C$DW$86, DW_AT_bit_offset(0x0d)
+     911                      .dwattr $C$DW$86, DW_AT_bit_size(0x01)
+     912                      .dwattr $C$DW$86, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     913                      .dwattr $C$DW$86, DW_AT_accessibility(DW_ACCESS_public)
+     914              
+     915              $C$DW$87        .dwtag  DW_TAG_member
+     916                      .dwattr $C$DW$87, DW_AT_type(*$C$DW$T$19)
+     917                      .dwattr $C$DW$87, DW_AT_name("GPIO3")
+     918                      .dwattr $C$DW$87, DW_AT_TI_symbol_name("_GPIO3")
+     919                      .dwattr $C$DW$87, DW_AT_bit_offset(0x0c)
+     920                      .dwattr $C$DW$87, DW_AT_bit_size(0x01)
+     921                      .dwattr $C$DW$87, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     922                      .dwattr $C$DW$87, DW_AT_accessibility(DW_ACCESS_public)
+     923              
+     924              $C$DW$88        .dwtag  DW_TAG_member
+     925                      .dwattr $C$DW$88, DW_AT_type(*$C$DW$T$19)
+     926                      .dwattr $C$DW$88, DW_AT_name("GPIO4")
+TMS320C2000 Assembler PC v16.9.6 Tue Mar 06 18:34:40 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Admin\AppData\Local\Temp\{399071AC-28E2-450C-AB44-40EE58F24F3A} PAGE   18
+
+     927                      .dwattr $C$DW$88, DW_AT_TI_symbol_name("_GPIO4")
+     928                      .dwattr $C$DW$88, DW_AT_bit_offset(0x0b)
+     929                      .dwattr $C$DW$88, DW_AT_bit_size(0x01)
+     930                      .dwattr $C$DW$88, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     931                      .dwattr $C$DW$88, DW_AT_accessibility(DW_ACCESS_public)
+     932              
+     933              $C$DW$89        .dwtag  DW_TAG_member
+     934                      .dwattr $C$DW$89, DW_AT_type(*$C$DW$T$19)
+     935                      .dwattr $C$DW$89, DW_AT_name("GPIO5")
+     936                      .dwattr $C$DW$89, DW_AT_TI_symbol_name("_GPIO5")
+     937                      .dwattr $C$DW$89, DW_AT_bit_offset(0x0a)
+     938                      .dwattr $C$DW$89, DW_AT_bit_size(0x01)
+     939                      .dwattr $C$DW$89, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     940                      .dwattr $C$DW$89, DW_AT_accessibility(DW_ACCESS_public)
+     941              
+     942              $C$DW$90        .dwtag  DW_TAG_member
+     943                      .dwattr $C$DW$90, DW_AT_type(*$C$DW$T$19)
+     944                      .dwattr $C$DW$90, DW_AT_name("GPIO6")
+     945                      .dwattr $C$DW$90, DW_AT_TI_symbol_name("_GPIO6")
+     946                      .dwattr $C$DW$90, DW_AT_bit_offset(0x09)
+     947                      .dwattr $C$DW$90, DW_AT_bit_size(0x01)
+     948                      .dwattr $C$DW$90, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     949                      .dwattr $C$DW$90, DW_AT_accessibility(DW_ACCESS_public)
+     950              
+     951              $C$DW$91        .dwtag  DW_TAG_member
+     952                      .dwattr $C$DW$91, DW_AT_type(*$C$DW$T$19)
+     953                      .dwattr $C$DW$91, DW_AT_name("GPIO7")
+     954                      .dwattr $C$DW$91, DW_AT_TI_symbol_name("_GPIO7")
+     955                      .dwattr $C$DW$91, DW_AT_bit_offset(0x08)
+     956                      .dwattr $C$DW$91, DW_AT_bit_size(0x01)
+     957                      .dwattr $C$DW$91, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     958                      .dwattr $C$DW$91, DW_AT_accessibility(DW_ACCESS_public)
+     959              
+     960              $C$DW$92        .dwtag  DW_TAG_member
+     961                      .dwattr $C$DW$92, DW_AT_type(*$C$DW$T$19)
+     962                      .dwattr $C$DW$92, DW_AT_name("GPIO8")
+     963                      .dwattr $C$DW$92, DW_AT_TI_symbol_name("_GPIO8")
+     964                      .dwattr $C$DW$92, DW_AT_bit_offset(0x07)
+     965                      .dwattr $C$DW$92, DW_AT_bit_size(0x01)
+     966                      .dwattr $C$DW$92, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     967                      .dwattr $C$DW$92, DW_AT_accessibility(DW_ACCESS_public)
+     968              
+     969              $C$DW$93        .dwtag  DW_TAG_member
+     970                      .dwattr $C$DW$93, DW_AT_type(*$C$DW$T$19)
+     971                      .dwattr $C$DW$93, DW_AT_name("GPIO9")
+     972                      .dwattr $C$DW$93, DW_AT_TI_symbol_name("_GPIO9")
+     973                      .dwattr $C$DW$93, DW_AT_bit_offset(0x06)
+     974                      .dwattr $C$DW$93, DW_AT_bit_size(0x01)
+     975                      .dwattr $C$DW$93, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     976                      .dwattr $C$DW$93, DW_AT_accessibility(DW_ACCESS_public)
+     977              
+     978              $C$DW$94        .dwtag  DW_TAG_member
+     979                      .dwattr $C$DW$94, DW_AT_type(*$C$DW$T$19)
+     980                      .dwattr $C$DW$94, DW_AT_name("GPIO10")
+     981                      .dwattr $C$DW$94, DW_AT_TI_symbol_name("_GPIO10")
+TMS320C2000 Assembler PC v16.9.6 Tue Mar 06 18:34:40 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Admin\AppData\Local\Temp\{399071AC-28E2-450C-AB44-40EE58F24F3A} PAGE   19
+
+     982                      .dwattr $C$DW$94, DW_AT_bit_offset(0x05)
+     983                      .dwattr $C$DW$94, DW_AT_bit_size(0x01)
+     984                      .dwattr $C$DW$94, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     985                      .dwattr $C$DW$94, DW_AT_accessibility(DW_ACCESS_public)
+     986              
+     987              $C$DW$95        .dwtag  DW_TAG_member
+     988                      .dwattr $C$DW$95, DW_AT_type(*$C$DW$T$19)
+     989                      .dwattr $C$DW$95, DW_AT_name("GPIO11")
+     990                      .dwattr $C$DW$95, DW_AT_TI_symbol_name("_GPIO11")
+     991                      .dwattr $C$DW$95, DW_AT_bit_offset(0x04)
+     992                      .dwattr $C$DW$95, DW_AT_bit_size(0x01)
+     993                      .dwattr $C$DW$95, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+     994                      .dwattr $C$DW$95, DW_AT_accessibility(DW_ACCESS_public)
+     995              
+     996              $C$DW$96        .dwtag  DW_TAG_member
+     997                      .dwattr $C$DW$96, DW_AT_type(*$C$DW$T$19)
+     998                      .dwattr $C$DW$96, DW_AT_name("GPIO12")
+     999                      .dwattr $C$DW$96, DW_AT_TI_symbol_name("_GPIO12")
+    1000                      .dwattr $C$DW$96, DW_AT_bit_offset(0x03)
+    1001                      .dwattr $C$DW$96, DW_AT_bit_size(0x01)
+    1002                      .dwattr $C$DW$96, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1003                      .dwattr $C$DW$96, DW_AT_accessibility(DW_ACCESS_public)
+    1004              
+    1005              $C$DW$97        .dwtag  DW_TAG_member
+    1006                      .dwattr $C$DW$97, DW_AT_type(*$C$DW$T$19)
+    1007                      .dwattr $C$DW$97, DW_AT_name("GPIO13")
+    1008                      .dwattr $C$DW$97, DW_AT_TI_symbol_name("_GPIO13")
+    1009                      .dwattr $C$DW$97, DW_AT_bit_offset(0x02)
+    1010                      .dwattr $C$DW$97, DW_AT_bit_size(0x01)
+    1011                      .dwattr $C$DW$97, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1012                      .dwattr $C$DW$97, DW_AT_accessibility(DW_ACCESS_public)
+    1013              
+    1014              $C$DW$98        .dwtag  DW_TAG_member
+    1015                      .dwattr $C$DW$98, DW_AT_type(*$C$DW$T$19)
+    1016                      .dwattr $C$DW$98, DW_AT_name("GPIO14")
+    1017                      .dwattr $C$DW$98, DW_AT_TI_symbol_name("_GPIO14")
+    1018                      .dwattr $C$DW$98, DW_AT_bit_offset(0x01)
+    1019                      .dwattr $C$DW$98, DW_AT_bit_size(0x01)
+    1020                      .dwattr $C$DW$98, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1021                      .dwattr $C$DW$98, DW_AT_accessibility(DW_ACCESS_public)
+    1022              
+    1023              $C$DW$99        .dwtag  DW_TAG_member
+    1024                      .dwattr $C$DW$99, DW_AT_type(*$C$DW$T$19)
+    1025                      .dwattr $C$DW$99, DW_AT_name("GPIO15")
+    1026                      .dwattr $C$DW$99, DW_AT_TI_symbol_name("_GPIO15")
+    1027                      .dwattr $C$DW$99, DW_AT_bit_offset(0x00)
+    1028                      .dwattr $C$DW$99, DW_AT_bit_size(0x01)
+    1029                      .dwattr $C$DW$99, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1030                      .dwattr $C$DW$99, DW_AT_accessibility(DW_ACCESS_public)
+    1031              
+    1032              $C$DW$100       .dwtag  DW_TAG_member
+    1033                      .dwattr $C$DW$100, DW_AT_type(*$C$DW$T$19)
+    1034                      .dwattr $C$DW$100, DW_AT_name("GPIO16")
+    1035                      .dwattr $C$DW$100, DW_AT_TI_symbol_name("_GPIO16")
+    1036                      .dwattr $C$DW$100, DW_AT_bit_offset(0x0f)
+TMS320C2000 Assembler PC v16.9.6 Tue Mar 06 18:34:40 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Admin\AppData\Local\Temp\{399071AC-28E2-450C-AB44-40EE58F24F3A} PAGE   20
+
+    1037                      .dwattr $C$DW$100, DW_AT_bit_size(0x01)
+    1038                      .dwattr $C$DW$100, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+    1039                      .dwattr $C$DW$100, DW_AT_accessibility(DW_ACCESS_public)
+    1040              
+    1041              $C$DW$101       .dwtag  DW_TAG_member
+    1042                      .dwattr $C$DW$101, DW_AT_type(*$C$DW$T$19)
+    1043                      .dwattr $C$DW$101, DW_AT_name("GPIO17")
+    1044                      .dwattr $C$DW$101, DW_AT_TI_symbol_name("_GPIO17")
+    1045                      .dwattr $C$DW$101, DW_AT_bit_offset(0x0e)
+    1046                      .dwattr $C$DW$101, DW_AT_bit_size(0x01)
+    1047                      .dwattr $C$DW$101, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+    1048                      .dwattr $C$DW$101, DW_AT_accessibility(DW_ACCESS_public)
+    1049              
+    1050              $C$DW$102       .dwtag  DW_TAG_member
+    1051                      .dwattr $C$DW$102, DW_AT_type(*$C$DW$T$19)
+    1052                      .dwattr $C$DW$102, DW_AT_name("GPIO18")
+    1053                      .dwattr $C$DW$102, DW_AT_TI_symbol_name("_GPIO18")
+    1054                      .dwattr $C$DW$102, DW_AT_bit_offset(0x0d)
+    1055                      .dwattr $C$DW$102, DW_AT_bit_size(0x01)
+    1056                      .dwattr $C$DW$102, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+    1057                      .dwattr $C$DW$102, DW_AT_accessibility(DW_ACCESS_public)
+    1058              
+    1059              $C$DW$103       .dwtag  DW_TAG_member
+    1060                      .dwattr $C$DW$103, DW_AT_type(*$C$DW$T$19)
+    1061                      .dwattr $C$DW$103, DW_AT_name("GPIO19")
+    1062                      .dwattr $C$DW$103, DW_AT_TI_symbol_name("_GPIO19")
+    1063                      .dwattr $C$DW$103, DW_AT_bit_offset(0x0c)
+    1064                      .dwattr $C$DW$103, DW_AT_bit_size(0x01)
+    1065                      .dwattr $C$DW$103, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+    1066                      .dwattr $C$DW$103, DW_AT_accessibility(DW_ACCESS_public)
+    1067              
+    1068              $C$DW$104       .dwtag  DW_TAG_member
+    1069                      .dwattr $C$DW$104, DW_AT_type(*$C$DW$T$19)
+    1070                      .dwattr $C$DW$104, DW_AT_name("GPIO20")
+    1071                      .dwattr $C$DW$104, DW_AT_TI_symbol_name("_GPIO20")
+    1072                      .dwattr $C$DW$104, DW_AT_bit_offset(0x0b)
+    1073                      .dwattr $C$DW$104, DW_AT_bit_size(0x01)
+    1074                      .dwattr $C$DW$104, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+    1075                      .dwattr $C$DW$104, DW_AT_accessibility(DW_ACCESS_public)
+    1076              
+    1077              $C$DW$105       .dwtag  DW_TAG_member
+    1078                      .dwattr $C$DW$105, DW_AT_type(*$C$DW$T$19)
+    1079                      .dwattr $C$DW$105, DW_AT_name("GPIO21")
+    1080                      .dwattr $C$DW$105, DW_AT_TI_symbol_name("_GPIO21")
+    1081                      .dwattr $C$DW$105, DW_AT_bit_offset(0x0a)
+    1082                      .dwattr $C$DW$105, DW_AT_bit_size(0x01)
+    1083                      .dwattr $C$DW$105, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+    1084                      .dwattr $C$DW$105, DW_AT_accessibility(DW_ACCESS_public)
+    1085              
+    1086              $C$DW$106       .dwtag  DW_TAG_member
+    1087                      .dwattr $C$DW$106, DW_AT_type(*$C$DW$T$19)
+    1088                      .dwattr $C$DW$106, DW_AT_name("GPIO22")
+    1089                      .dwattr $C$DW$106, DW_AT_TI_symbol_name("_GPIO22")
+    1090                      .dwattr $C$DW$106, DW_AT_bit_offset(0x09)
+    1091                      .dwattr $C$DW$106, DW_AT_bit_size(0x01)
+TMS320C2000 Assembler PC v16.9.6 Tue Mar 06 18:34:40 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Admin\AppData\Local\Temp\{399071AC-28E2-450C-AB44-40EE58F24F3A} PAGE   21
+
+    1092                      .dwattr $C$DW$106, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+    1093                      .dwattr $C$DW$106, DW_AT_accessibility(DW_ACCESS_public)
+    1094              
+    1095              $C$DW$107       .dwtag  DW_TAG_member
+    1096                      .dwattr $C$DW$107, DW_AT_type(*$C$DW$T$19)
+    1097                      .dwattr $C$DW$107, DW_AT_name("GPIO23")
+    1098                      .dwattr $C$DW$107, DW_AT_TI_symbol_name("_GPIO23")
+    1099                      .dwattr $C$DW$107, DW_AT_bit_offset(0x08)
+    1100                      .dwattr $C$DW$107, DW_AT_bit_size(0x01)
+    1101                      .dwattr $C$DW$107, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+    1102                      .dwattr $C$DW$107, DW_AT_accessibility(DW_ACCESS_public)
+    1103              
+    1104              $C$DW$108       .dwtag  DW_TAG_member
+    1105                      .dwattr $C$DW$108, DW_AT_type(*$C$DW$T$19)
+    1106                      .dwattr $C$DW$108, DW_AT_name("GPIO24")
+    1107                      .dwattr $C$DW$108, DW_AT_TI_symbol_name("_GPIO24")
+    1108                      .dwattr $C$DW$108, DW_AT_bit_offset(0x07)
+    1109                      .dwattr $C$DW$108, DW_AT_bit_size(0x01)
+    1110                      .dwattr $C$DW$108, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+    1111                      .dwattr $C$DW$108, DW_AT_accessibility(DW_ACCESS_public)
+    1112              
+    1113              $C$DW$109       .dwtag  DW_TAG_member
+    1114                      .dwattr $C$DW$109, DW_AT_type(*$C$DW$T$19)
+    1115                      .dwattr $C$DW$109, DW_AT_name("GPIO25")
+    1116                      .dwattr $C$DW$109, DW_AT_TI_symbol_name("_GPIO25")
+    1117                      .dwattr $C$DW$109, DW_AT_bit_offset(0x06)
+    1118                      .dwattr $C$DW$109, DW_AT_bit_size(0x01)
+    1119                      .dwattr $C$DW$109, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+    1120                      .dwattr $C$DW$109, DW_AT_accessibility(DW_ACCESS_public)
+    1121              
+    1122              $C$DW$110       .dwtag  DW_TAG_member
+    1123                      .dwattr $C$DW$110, DW_AT_type(*$C$DW$T$19)
+    1124                      .dwattr $C$DW$110, DW_AT_name("GPIO26")
+    1125                      .dwattr $C$DW$110, DW_AT_TI_symbol_name("_GPIO26")
+    1126                      .dwattr $C$DW$110, DW_AT_bit_offset(0x05)
+    1127                      .dwattr $C$DW$110, DW_AT_bit_size(0x01)
+    1128                      .dwattr $C$DW$110, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+    1129                      .dwattr $C$DW$110, DW_AT_accessibility(DW_ACCESS_public)
+    1130              
+    1131              $C$DW$111       .dwtag  DW_TAG_member
+    1132                      .dwattr $C$DW$111, DW_AT_type(*$C$DW$T$19)
+    1133                      .dwattr $C$DW$111, DW_AT_name("GPIO27")
+    1134                      .dwattr $C$DW$111, DW_AT_TI_symbol_name("_GPIO27")
+    1135                      .dwattr $C$DW$111, DW_AT_bit_offset(0x04)
+    1136                      .dwattr $C$DW$111, DW_AT_bit_size(0x01)
+    1137                      .dwattr $C$DW$111, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+    1138                      .dwattr $C$DW$111, DW_AT_accessibility(DW_ACCESS_public)
+    1139              
+    1140              $C$DW$112       .dwtag  DW_TAG_member
+    1141                      .dwattr $C$DW$112, DW_AT_type(*$C$DW$T$19)
+    1142                      .dwattr $C$DW$112, DW_AT_name("GPIO28")
+    1143                      .dwattr $C$DW$112, DW_AT_TI_symbol_name("_GPIO28")
+    1144                      .dwattr $C$DW$112, DW_AT_bit_offset(0x03)
+    1145                      .dwattr $C$DW$112, DW_AT_bit_size(0x01)
+    1146                      .dwattr $C$DW$112, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+TMS320C2000 Assembler PC v16.9.6 Tue Mar 06 18:34:40 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Admin\AppData\Local\Temp\{399071AC-28E2-450C-AB44-40EE58F24F3A} PAGE   22
+
+    1147                      .dwattr $C$DW$112, DW_AT_accessibility(DW_ACCESS_public)
+    1148              
+    1149              $C$DW$113       .dwtag  DW_TAG_member
+    1150                      .dwattr $C$DW$113, DW_AT_type(*$C$DW$T$19)
+    1151                      .dwattr $C$DW$113, DW_AT_name("GPIO29")
+    1152                      .dwattr $C$DW$113, DW_AT_TI_symbol_name("_GPIO29")
+    1153                      .dwattr $C$DW$113, DW_AT_bit_offset(0x02)
+    1154                      .dwattr $C$DW$113, DW_AT_bit_size(0x01)
+    1155                      .dwattr $C$DW$113, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+    1156                      .dwattr $C$DW$113, DW_AT_accessibility(DW_ACCESS_public)
+    1157              
+    1158              $C$DW$114       .dwtag  DW_TAG_member
+    1159                      .dwattr $C$DW$114, DW_AT_type(*$C$DW$T$19)
+    1160                      .dwattr $C$DW$114, DW_AT_name("GPIO30")
+    1161                      .dwattr $C$DW$114, DW_AT_TI_symbol_name("_GPIO30")
+    1162                      .dwattr $C$DW$114, DW_AT_bit_offset(0x01)
+    1163                      .dwattr $C$DW$114, DW_AT_bit_size(0x01)
+    1164                      .dwattr $C$DW$114, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+    1165                      .dwattr $C$DW$114, DW_AT_accessibility(DW_ACCESS_public)
+    1166              
+    1167              $C$DW$115       .dwtag  DW_TAG_member
+    1168                      .dwattr $C$DW$115, DW_AT_type(*$C$DW$T$19)
+    1169                      .dwattr $C$DW$115, DW_AT_name("GPIO31")
+    1170                      .dwattr $C$DW$115, DW_AT_TI_symbol_name("_GPIO31")
+    1171                      .dwattr $C$DW$115, DW_AT_bit_offset(0x00)
+    1172                      .dwattr $C$DW$115, DW_AT_bit_size(0x01)
+    1173                      .dwattr $C$DW$115, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+    1174                      .dwattr $C$DW$115, DW_AT_accessibility(DW_ACCESS_public)
+    1175              
+    1176                      .dwendtag $C$DW$T$31
+    1177              
+    1178              
+    1179              $C$DW$T$32      .dwtag  DW_TAG_union_type
+    1180                      .dwattr $C$DW$T$32, DW_AT_name("GPADAT_REG")
+    1181                      .dwattr $C$DW$T$32, DW_AT_byte_size(0x02)
+    1182              $C$DW$116       .dwtag  DW_TAG_member
+    1183                      .dwattr $C$DW$116, DW_AT_type(*$C$DW$T$23)
+    1184                      .dwattr $C$DW$116, DW_AT_name("all")
+    1185                      .dwattr $C$DW$116, DW_AT_TI_symbol_name("_all")
+    1186                      .dwattr $C$DW$116, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1187                      .dwattr $C$DW$116, DW_AT_accessibility(DW_ACCESS_public)
+    1188              
+    1189              $C$DW$117       .dwtag  DW_TAG_member
+    1190                      .dwattr $C$DW$117, DW_AT_type(*$C$DW$T$31)
+    1191                      .dwattr $C$DW$117, DW_AT_name("bit")
+    1192                      .dwattr $C$DW$117, DW_AT_TI_symbol_name("_bit")
+    1193                      .dwattr $C$DW$117, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1194                      .dwattr $C$DW$117, DW_AT_accessibility(DW_ACCESS_public)
+    1195              
+    1196                      .dwendtag $C$DW$T$32
+    1197              
+    1198              
+    1199              $C$DW$T$33      .dwtag  DW_TAG_structure_type
+    1200                      .dwattr $C$DW$T$33, DW_AT_name("GPB1_BITS")
+    1201                      .dwattr $C$DW$T$33, DW_AT_byte_size(0x02)
+TMS320C2000 Assembler PC v16.9.6 Tue Mar 06 18:34:40 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Admin\AppData\Local\Temp\{399071AC-28E2-450C-AB44-40EE58F24F3A} PAGE   23
+
+    1202              $C$DW$118       .dwtag  DW_TAG_member
+    1203                      .dwattr $C$DW$118, DW_AT_type(*$C$DW$T$19)
+    1204                      .dwattr $C$DW$118, DW_AT_name("GPIO32")
+    1205                      .dwattr $C$DW$118, DW_AT_TI_symbol_name("_GPIO32")
+    1206                      .dwattr $C$DW$118, DW_AT_bit_offset(0x0e)
+    1207                      .dwattr $C$DW$118, DW_AT_bit_size(0x02)
+    1208                      .dwattr $C$DW$118, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1209                      .dwattr $C$DW$118, DW_AT_accessibility(DW_ACCESS_public)
+    1210              
+    1211              $C$DW$119       .dwtag  DW_TAG_member
+    1212                      .dwattr $C$DW$119, DW_AT_type(*$C$DW$T$19)
+    1213                      .dwattr $C$DW$119, DW_AT_name("GPIO33")
+    1214                      .dwattr $C$DW$119, DW_AT_TI_symbol_name("_GPIO33")
+    1215                      .dwattr $C$DW$119, DW_AT_bit_offset(0x0c)
+    1216                      .dwattr $C$DW$119, DW_AT_bit_size(0x02)
+    1217                      .dwattr $C$DW$119, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1218                      .dwattr $C$DW$119, DW_AT_accessibility(DW_ACCESS_public)
+    1219              
+    1220              $C$DW$120       .dwtag  DW_TAG_member
+    1221                      .dwattr $C$DW$120, DW_AT_type(*$C$DW$T$19)
+    1222                      .dwattr $C$DW$120, DW_AT_name("GPIO34")
+    1223                      .dwattr $C$DW$120, DW_AT_TI_symbol_name("_GPIO34")
+    1224                      .dwattr $C$DW$120, DW_AT_bit_offset(0x0a)
+    1225                      .dwattr $C$DW$120, DW_AT_bit_size(0x02)
+    1226                      .dwattr $C$DW$120, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1227                      .dwattr $C$DW$120, DW_AT_accessibility(DW_ACCESS_public)
+    1228              
+    1229              $C$DW$121       .dwtag  DW_TAG_member
+    1230                      .dwattr $C$DW$121, DW_AT_type(*$C$DW$T$19)
+    1231                      .dwattr $C$DW$121, DW_AT_name("GPIO35")
+    1232                      .dwattr $C$DW$121, DW_AT_TI_symbol_name("_GPIO35")
+    1233                      .dwattr $C$DW$121, DW_AT_bit_offset(0x08)
+    1234                      .dwattr $C$DW$121, DW_AT_bit_size(0x02)
+    1235                      .dwattr $C$DW$121, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1236                      .dwattr $C$DW$121, DW_AT_accessibility(DW_ACCESS_public)
+    1237              
+    1238              $C$DW$122       .dwtag  DW_TAG_member
+    1239                      .dwattr $C$DW$122, DW_AT_type(*$C$DW$T$19)
+    1240                      .dwattr $C$DW$122, DW_AT_name("GPIO36")
+    1241                      .dwattr $C$DW$122, DW_AT_TI_symbol_name("_GPIO36")
+    1242                      .dwattr $C$DW$122, DW_AT_bit_offset(0x06)
+    1243                      .dwattr $C$DW$122, DW_AT_bit_size(0x02)
+    1244                      .dwattr $C$DW$122, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1245                      .dwattr $C$DW$122, DW_AT_accessibility(DW_ACCESS_public)
+    1246              
+    1247              $C$DW$123       .dwtag  DW_TAG_member
+    1248                      .dwattr $C$DW$123, DW_AT_type(*$C$DW$T$19)
+    1249                      .dwattr $C$DW$123, DW_AT_name("GPIO37")
+    1250                      .dwattr $C$DW$123, DW_AT_TI_symbol_name("_GPIO37")
+    1251                      .dwattr $C$DW$123, DW_AT_bit_offset(0x04)
+    1252                      .dwattr $C$DW$123, DW_AT_bit_size(0x02)
+    1253                      .dwattr $C$DW$123, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1254                      .dwattr $C$DW$123, DW_AT_accessibility(DW_ACCESS_public)
+    1255              
+    1256              $C$DW$124       .dwtag  DW_TAG_member
+TMS320C2000 Assembler PC v16.9.6 Tue Mar 06 18:34:40 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Admin\AppData\Local\Temp\{399071AC-28E2-450C-AB44-40EE58F24F3A} PAGE   24
+
+    1257                      .dwattr $C$DW$124, DW_AT_type(*$C$DW$T$19)
+    1258                      .dwattr $C$DW$124, DW_AT_name("GPIO38")
+    1259                      .dwattr $C$DW$124, DW_AT_TI_symbol_name("_GPIO38")
+    1260                      .dwattr $C$DW$124, DW_AT_bit_offset(0x02)
+    1261                      .dwattr $C$DW$124, DW_AT_bit_size(0x02)
+    1262                      .dwattr $C$DW$124, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1263                      .dwattr $C$DW$124, DW_AT_accessibility(DW_ACCESS_public)
+    1264              
+    1265              $C$DW$125       .dwtag  DW_TAG_member
+    1266                      .dwattr $C$DW$125, DW_AT_type(*$C$DW$T$19)
+    1267                      .dwattr $C$DW$125, DW_AT_name("GPIO39")
+    1268                      .dwattr $C$DW$125, DW_AT_TI_symbol_name("_GPIO39")
+    1269                      .dwattr $C$DW$125, DW_AT_bit_offset(0x00)
+    1270                      .dwattr $C$DW$125, DW_AT_bit_size(0x02)
+    1271                      .dwattr $C$DW$125, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1272                      .dwattr $C$DW$125, DW_AT_accessibility(DW_ACCESS_public)
+    1273              
+    1274              $C$DW$126       .dwtag  DW_TAG_member
+    1275                      .dwattr $C$DW$126, DW_AT_type(*$C$DW$T$19)
+    1276                      .dwattr $C$DW$126, DW_AT_name("GPIO40")
+    1277                      .dwattr $C$DW$126, DW_AT_TI_symbol_name("_GPIO40")
+    1278                      .dwattr $C$DW$126, DW_AT_bit_offset(0x0e)
+    1279                      .dwattr $C$DW$126, DW_AT_bit_size(0x02)
+    1280                      .dwattr $C$DW$126, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+    1281                      .dwattr $C$DW$126, DW_AT_accessibility(DW_ACCESS_public)
+    1282              
+    1283              $C$DW$127       .dwtag  DW_TAG_member
+    1284                      .dwattr $C$DW$127, DW_AT_type(*$C$DW$T$19)
+    1285                      .dwattr $C$DW$127, DW_AT_name("GPIO41")
+    1286                      .dwattr $C$DW$127, DW_AT_TI_symbol_name("_GPIO41")
+    1287                      .dwattr $C$DW$127, DW_AT_bit_offset(0x0c)
+    1288                      .dwattr $C$DW$127, DW_AT_bit_size(0x02)
+    1289                      .dwattr $C$DW$127, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+    1290                      .dwattr $C$DW$127, DW_AT_accessibility(DW_ACCESS_public)
+    1291              
+    1292              $C$DW$128       .dwtag  DW_TAG_member
+    1293                      .dwattr $C$DW$128, DW_AT_type(*$C$DW$T$19)
+    1294                      .dwattr $C$DW$128, DW_AT_name("GPIO42")
+    1295                      .dwattr $C$DW$128, DW_AT_TI_symbol_name("_GPIO42")
+    1296                      .dwattr $C$DW$128, DW_AT_bit_offset(0x0a)
+    1297                      .dwattr $C$DW$128, DW_AT_bit_size(0x02)
+    1298                      .dwattr $C$DW$128, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+    1299                      .dwattr $C$DW$128, DW_AT_accessibility(DW_ACCESS_public)
+    1300              
+    1301              $C$DW$129       .dwtag  DW_TAG_member
+    1302                      .dwattr $C$DW$129, DW_AT_type(*$C$DW$T$19)
+    1303                      .dwattr $C$DW$129, DW_AT_name("GPIO43")
+    1304                      .dwattr $C$DW$129, DW_AT_TI_symbol_name("_GPIO43")
+    1305                      .dwattr $C$DW$129, DW_AT_bit_offset(0x08)
+    1306                      .dwattr $C$DW$129, DW_AT_bit_size(0x02)
+    1307                      .dwattr $C$DW$129, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+    1308                      .dwattr $C$DW$129, DW_AT_accessibility(DW_ACCESS_public)
+    1309              
+    1310              $C$DW$130       .dwtag  DW_TAG_member
+    1311                      .dwattr $C$DW$130, DW_AT_type(*$C$DW$T$19)
+TMS320C2000 Assembler PC v16.9.6 Tue Mar 06 18:34:40 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Admin\AppData\Local\Temp\{399071AC-28E2-450C-AB44-40EE58F24F3A} PAGE   25
+
+    1312                      .dwattr $C$DW$130, DW_AT_name("GPIO44")
+    1313                      .dwattr $C$DW$130, DW_AT_TI_symbol_name("_GPIO44")
+    1314                      .dwattr $C$DW$130, DW_AT_bit_offset(0x06)
+    1315                      .dwattr $C$DW$130, DW_AT_bit_size(0x02)
+    1316                      .dwattr $C$DW$130, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+    1317                      .dwattr $C$DW$130, DW_AT_accessibility(DW_ACCESS_public)
+    1318              
+    1319              $C$DW$131       .dwtag  DW_TAG_member
+    1320                      .dwattr $C$DW$131, DW_AT_type(*$C$DW$T$19)
+    1321                      .dwattr $C$DW$131, DW_AT_name("rsvd1")
+    1322                      .dwattr $C$DW$131, DW_AT_TI_symbol_name("_rsvd1")
+    1323                      .dwattr $C$DW$131, DW_AT_bit_offset(0x00)
+    1324                      .dwattr $C$DW$131, DW_AT_bit_size(0x06)
+    1325                      .dwattr $C$DW$131, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+    1326                      .dwattr $C$DW$131, DW_AT_accessibility(DW_ACCESS_public)
+    1327              
+    1328                      .dwendtag $C$DW$T$33
+    1329              
+    1330              
+    1331              $C$DW$T$34      .dwtag  DW_TAG_union_type
+    1332                      .dwattr $C$DW$T$34, DW_AT_name("GPB1_REG")
+    1333                      .dwattr $C$DW$T$34, DW_AT_byte_size(0x02)
+    1334              $C$DW$132       .dwtag  DW_TAG_member
+    1335                      .dwattr $C$DW$132, DW_AT_type(*$C$DW$T$23)
+    1336                      .dwattr $C$DW$132, DW_AT_name("all")
+    1337                      .dwattr $C$DW$132, DW_AT_TI_symbol_name("_all")
+    1338                      .dwattr $C$DW$132, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1339                      .dwattr $C$DW$132, DW_AT_accessibility(DW_ACCESS_public)
+    1340              
+    1341              $C$DW$133       .dwtag  DW_TAG_member
+    1342                      .dwattr $C$DW$133, DW_AT_type(*$C$DW$T$33)
+    1343                      .dwattr $C$DW$133, DW_AT_name("bit")
+    1344                      .dwattr $C$DW$133, DW_AT_TI_symbol_name("_bit")
+    1345                      .dwattr $C$DW$133, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1346                      .dwattr $C$DW$133, DW_AT_accessibility(DW_ACCESS_public)
+    1347              
+    1348                      .dwendtag $C$DW$T$34
+    1349              
+    1350              
+    1351              $C$DW$T$35      .dwtag  DW_TAG_structure_type
+    1352                      .dwattr $C$DW$T$35, DW_AT_name("GPBCTRL_BITS")
+    1353                      .dwattr $C$DW$T$35, DW_AT_byte_size(0x02)
+    1354              $C$DW$134       .dwtag  DW_TAG_member
+    1355                      .dwattr $C$DW$134, DW_AT_type(*$C$DW$T$19)
+    1356                      .dwattr $C$DW$134, DW_AT_name("QUALPRD0")
+    1357                      .dwattr $C$DW$134, DW_AT_TI_symbol_name("_QUALPRD0")
+    1358                      .dwattr $C$DW$134, DW_AT_bit_offset(0x08)
+    1359                      .dwattr $C$DW$134, DW_AT_bit_size(0x08)
+    1360                      .dwattr $C$DW$134, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1361                      .dwattr $C$DW$134, DW_AT_accessibility(DW_ACCESS_public)
+    1362              
+    1363              $C$DW$135       .dwtag  DW_TAG_member
+    1364                      .dwattr $C$DW$135, DW_AT_type(*$C$DW$T$19)
+    1365                      .dwattr $C$DW$135, DW_AT_name("rsvd1")
+    1366                      .dwattr $C$DW$135, DW_AT_TI_symbol_name("_rsvd1")
+TMS320C2000 Assembler PC v16.9.6 Tue Mar 06 18:34:40 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Admin\AppData\Local\Temp\{399071AC-28E2-450C-AB44-40EE58F24F3A} PAGE   26
+
+    1367                      .dwattr $C$DW$135, DW_AT_bit_offset(0x00)
+    1368                      .dwattr $C$DW$135, DW_AT_bit_size(0x08)
+    1369                      .dwattr $C$DW$135, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1370                      .dwattr $C$DW$135, DW_AT_accessibility(DW_ACCESS_public)
+    1371              
+    1372              $C$DW$136       .dwtag  DW_TAG_member
+    1373                      .dwattr $C$DW$136, DW_AT_type(*$C$DW$T$19)
+    1374                      .dwattr $C$DW$136, DW_AT_name("rsvd2")
+    1375                      .dwattr $C$DW$136, DW_AT_TI_symbol_name("_rsvd2")
+    1376                      .dwattr $C$DW$136, DW_AT_bit_offset(0x00)
+    1377                      .dwattr $C$DW$136, DW_AT_bit_size(0x10)
+    1378                      .dwattr $C$DW$136, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+    1379                      .dwattr $C$DW$136, DW_AT_accessibility(DW_ACCESS_public)
+    1380              
+    1381                      .dwendtag $C$DW$T$35
+    1382              
+    1383              
+    1384              $C$DW$T$36      .dwtag  DW_TAG_union_type
+    1385                      .dwattr $C$DW$T$36, DW_AT_name("GPBCTRL_REG")
+    1386                      .dwattr $C$DW$T$36, DW_AT_byte_size(0x02)
+    1387              $C$DW$137       .dwtag  DW_TAG_member
+    1388                      .dwattr $C$DW$137, DW_AT_type(*$C$DW$T$23)
+    1389                      .dwattr $C$DW$137, DW_AT_name("all")
+    1390                      .dwattr $C$DW$137, DW_AT_TI_symbol_name("_all")
+    1391                      .dwattr $C$DW$137, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1392                      .dwattr $C$DW$137, DW_AT_accessibility(DW_ACCESS_public)
+    1393              
+    1394              $C$DW$138       .dwtag  DW_TAG_member
+    1395                      .dwattr $C$DW$138, DW_AT_type(*$C$DW$T$35)
+    1396                      .dwattr $C$DW$138, DW_AT_name("bit")
+    1397                      .dwattr $C$DW$138, DW_AT_TI_symbol_name("_bit")
+    1398                      .dwattr $C$DW$138, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1399                      .dwattr $C$DW$138, DW_AT_accessibility(DW_ACCESS_public)
+    1400              
+    1401                      .dwendtag $C$DW$T$36
+    1402              
+    1403              
+    1404              $C$DW$T$37      .dwtag  DW_TAG_structure_type
+    1405                      .dwattr $C$DW$T$37, DW_AT_name("GPBDAT_BITS")
+    1406                      .dwattr $C$DW$T$37, DW_AT_byte_size(0x02)
+    1407              $C$DW$139       .dwtag  DW_TAG_member
+    1408                      .dwattr $C$DW$139, DW_AT_type(*$C$DW$T$19)
+    1409                      .dwattr $C$DW$139, DW_AT_name("GPIO32")
+    1410                      .dwattr $C$DW$139, DW_AT_TI_symbol_name("_GPIO32")
+    1411                      .dwattr $C$DW$139, DW_AT_bit_offset(0x0f)
+    1412                      .dwattr $C$DW$139, DW_AT_bit_size(0x01)
+    1413                      .dwattr $C$DW$139, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1414                      .dwattr $C$DW$139, DW_AT_accessibility(DW_ACCESS_public)
+    1415              
+    1416              $C$DW$140       .dwtag  DW_TAG_member
+    1417                      .dwattr $C$DW$140, DW_AT_type(*$C$DW$T$19)
+    1418                      .dwattr $C$DW$140, DW_AT_name("GPIO33")
+    1419                      .dwattr $C$DW$140, DW_AT_TI_symbol_name("_GPIO33")
+    1420                      .dwattr $C$DW$140, DW_AT_bit_offset(0x0e)
+    1421                      .dwattr $C$DW$140, DW_AT_bit_size(0x01)
+TMS320C2000 Assembler PC v16.9.6 Tue Mar 06 18:34:40 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Admin\AppData\Local\Temp\{399071AC-28E2-450C-AB44-40EE58F24F3A} PAGE   27
+
+    1422                      .dwattr $C$DW$140, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1423                      .dwattr $C$DW$140, DW_AT_accessibility(DW_ACCESS_public)
+    1424              
+    1425              $C$DW$141       .dwtag  DW_TAG_member
+    1426                      .dwattr $C$DW$141, DW_AT_type(*$C$DW$T$19)
+    1427                      .dwattr $C$DW$141, DW_AT_name("GPIO34")
+    1428                      .dwattr $C$DW$141, DW_AT_TI_symbol_name("_GPIO34")
+    1429                      .dwattr $C$DW$141, DW_AT_bit_offset(0x0d)
+    1430                      .dwattr $C$DW$141, DW_AT_bit_size(0x01)
+    1431                      .dwattr $C$DW$141, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1432                      .dwattr $C$DW$141, DW_AT_accessibility(DW_ACCESS_public)
+    1433              
+    1434              $C$DW$142       .dwtag  DW_TAG_member
+    1435                      .dwattr $C$DW$142, DW_AT_type(*$C$DW$T$19)
+    1436                      .dwattr $C$DW$142, DW_AT_name("GPIO35")
+    1437                      .dwattr $C$DW$142, DW_AT_TI_symbol_name("_GPIO35")
+    1438                      .dwattr $C$DW$142, DW_AT_bit_offset(0x0c)
+    1439                      .dwattr $C$DW$142, DW_AT_bit_size(0x01)
+    1440                      .dwattr $C$DW$142, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1441                      .dwattr $C$DW$142, DW_AT_accessibility(DW_ACCESS_public)
+    1442              
+    1443              $C$DW$143       .dwtag  DW_TAG_member
+    1444                      .dwattr $C$DW$143, DW_AT_type(*$C$DW$T$19)
+    1445                      .dwattr $C$DW$143, DW_AT_name("GPIO36")
+    1446                      .dwattr $C$DW$143, DW_AT_TI_symbol_name("_GPIO36")
+    1447                      .dwattr $C$DW$143, DW_AT_bit_offset(0x0b)
+    1448                      .dwattr $C$DW$143, DW_AT_bit_size(0x01)
+    1449                      .dwattr $C$DW$143, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1450                      .dwattr $C$DW$143, DW_AT_accessibility(DW_ACCESS_public)
+    1451              
+    1452              $C$DW$144       .dwtag  DW_TAG_member
+    1453                      .dwattr $C$DW$144, DW_AT_type(*$C$DW$T$19)
+    1454                      .dwattr $C$DW$144, DW_AT_name("GPIO37")
+    1455                      .dwattr $C$DW$144, DW_AT_TI_symbol_name("_GPIO37")
+    1456                      .dwattr $C$DW$144, DW_AT_bit_offset(0x0a)
+    1457                      .dwattr $C$DW$144, DW_AT_bit_size(0x01)
+    1458                      .dwattr $C$DW$144, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1459                      .dwattr $C$DW$144, DW_AT_accessibility(DW_ACCESS_public)
+    1460              
+    1461              $C$DW$145       .dwtag  DW_TAG_member
+    1462                      .dwattr $C$DW$145, DW_AT_type(*$C$DW$T$19)
+    1463                      .dwattr $C$DW$145, DW_AT_name("GPIO38")
+    1464                      .dwattr $C$DW$145, DW_AT_TI_symbol_name("_GPIO38")
+    1465                      .dwattr $C$DW$145, DW_AT_bit_offset(0x09)
+    1466                      .dwattr $C$DW$145, DW_AT_bit_size(0x01)
+    1467                      .dwattr $C$DW$145, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1468                      .dwattr $C$DW$145, DW_AT_accessibility(DW_ACCESS_public)
+    1469              
+    1470              $C$DW$146       .dwtag  DW_TAG_member
+    1471                      .dwattr $C$DW$146, DW_AT_type(*$C$DW$T$19)
+    1472                      .dwattr $C$DW$146, DW_AT_name("GPIO39")
+    1473                      .dwattr $C$DW$146, DW_AT_TI_symbol_name("_GPIO39")
+    1474                      .dwattr $C$DW$146, DW_AT_bit_offset(0x08)
+    1475                      .dwattr $C$DW$146, DW_AT_bit_size(0x01)
+    1476                      .dwattr $C$DW$146, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+TMS320C2000 Assembler PC v16.9.6 Tue Mar 06 18:34:40 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Admin\AppData\Local\Temp\{399071AC-28E2-450C-AB44-40EE58F24F3A} PAGE   28
+
+    1477                      .dwattr $C$DW$146, DW_AT_accessibility(DW_ACCESS_public)
+    1478              
+    1479              $C$DW$147       .dwtag  DW_TAG_member
+    1480                      .dwattr $C$DW$147, DW_AT_type(*$C$DW$T$19)
+    1481                      .dwattr $C$DW$147, DW_AT_name("GPIO40")
+    1482                      .dwattr $C$DW$147, DW_AT_TI_symbol_name("_GPIO40")
+    1483                      .dwattr $C$DW$147, DW_AT_bit_offset(0x07)
+    1484                      .dwattr $C$DW$147, DW_AT_bit_size(0x01)
+    1485                      .dwattr $C$DW$147, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1486                      .dwattr $C$DW$147, DW_AT_accessibility(DW_ACCESS_public)
+    1487              
+    1488              $C$DW$148       .dwtag  DW_TAG_member
+    1489                      .dwattr $C$DW$148, DW_AT_type(*$C$DW$T$19)
+    1490                      .dwattr $C$DW$148, DW_AT_name("GPIO41")
+    1491                      .dwattr $C$DW$148, DW_AT_TI_symbol_name("_GPIO41")
+    1492                      .dwattr $C$DW$148, DW_AT_bit_offset(0x06)
+    1493                      .dwattr $C$DW$148, DW_AT_bit_size(0x01)
+    1494                      .dwattr $C$DW$148, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1495                      .dwattr $C$DW$148, DW_AT_accessibility(DW_ACCESS_public)
+    1496              
+    1497              $C$DW$149       .dwtag  DW_TAG_member
+    1498                      .dwattr $C$DW$149, DW_AT_type(*$C$DW$T$19)
+    1499                      .dwattr $C$DW$149, DW_AT_name("GPIO42")
+    1500                      .dwattr $C$DW$149, DW_AT_TI_symbol_name("_GPIO42")
+    1501                      .dwattr $C$DW$149, DW_AT_bit_offset(0x05)
+    1502                      .dwattr $C$DW$149, DW_AT_bit_size(0x01)
+    1503                      .dwattr $C$DW$149, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1504                      .dwattr $C$DW$149, DW_AT_accessibility(DW_ACCESS_public)
+    1505              
+    1506              $C$DW$150       .dwtag  DW_TAG_member
+    1507                      .dwattr $C$DW$150, DW_AT_type(*$C$DW$T$19)
+    1508                      .dwattr $C$DW$150, DW_AT_name("GPIO43")
+    1509                      .dwattr $C$DW$150, DW_AT_TI_symbol_name("_GPIO43")
+    1510                      .dwattr $C$DW$150, DW_AT_bit_offset(0x04)
+    1511                      .dwattr $C$DW$150, DW_AT_bit_size(0x01)
+    1512                      .dwattr $C$DW$150, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1513                      .dwattr $C$DW$150, DW_AT_accessibility(DW_ACCESS_public)
+    1514              
+    1515              $C$DW$151       .dwtag  DW_TAG_member
+    1516                      .dwattr $C$DW$151, DW_AT_type(*$C$DW$T$19)
+    1517                      .dwattr $C$DW$151, DW_AT_name("GPIO44")
+    1518                      .dwattr $C$DW$151, DW_AT_TI_symbol_name("_GPIO44")
+    1519                      .dwattr $C$DW$151, DW_AT_bit_offset(0x03)
+    1520                      .dwattr $C$DW$151, DW_AT_bit_size(0x01)
+    1521                      .dwattr $C$DW$151, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1522                      .dwattr $C$DW$151, DW_AT_accessibility(DW_ACCESS_public)
+    1523              
+    1524              $C$DW$152       .dwtag  DW_TAG_member
+    1525                      .dwattr $C$DW$152, DW_AT_type(*$C$DW$T$19)
+    1526                      .dwattr $C$DW$152, DW_AT_name("rsvd1")
+    1527                      .dwattr $C$DW$152, DW_AT_TI_symbol_name("_rsvd1")
+    1528                      .dwattr $C$DW$152, DW_AT_bit_offset(0x00)
+    1529                      .dwattr $C$DW$152, DW_AT_bit_size(0x03)
+    1530                      .dwattr $C$DW$152, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1531                      .dwattr $C$DW$152, DW_AT_accessibility(DW_ACCESS_public)
+TMS320C2000 Assembler PC v16.9.6 Tue Mar 06 18:34:40 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Admin\AppData\Local\Temp\{399071AC-28E2-450C-AB44-40EE58F24F3A} PAGE   29
+
+    1532              
+    1533              $C$DW$153       .dwtag  DW_TAG_member
+    1534                      .dwattr $C$DW$153, DW_AT_type(*$C$DW$T$19)
+    1535                      .dwattr $C$DW$153, DW_AT_name("rsvd2")
+    1536                      .dwattr $C$DW$153, DW_AT_TI_symbol_name("_rsvd2")
+    1537                      .dwattr $C$DW$153, DW_AT_bit_offset(0x00)
+    1538                      .dwattr $C$DW$153, DW_AT_bit_size(0x10)
+    1539                      .dwattr $C$DW$153, DW_AT_data_member_location[DW_OP_plus_uconst 0x1]
+    1540                      .dwattr $C$DW$153, DW_AT_accessibility(DW_ACCESS_public)
+    1541              
+    1542                      .dwendtag $C$DW$T$37
+    1543              
+    1544              
+    1545              $C$DW$T$38      .dwtag  DW_TAG_union_type
+    1546                      .dwattr $C$DW$T$38, DW_AT_name("GPBDAT_REG")
+    1547                      .dwattr $C$DW$T$38, DW_AT_byte_size(0x02)
+    1548              $C$DW$154       .dwtag  DW_TAG_member
+    1549                      .dwattr $C$DW$154, DW_AT_type(*$C$DW$T$23)
+    1550                      .dwattr $C$DW$154, DW_AT_name("all")
+    1551                      .dwattr $C$DW$154, DW_AT_TI_symbol_name("_all")
+    1552                      .dwattr $C$DW$154, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1553                      .dwattr $C$DW$154, DW_AT_accessibility(DW_ACCESS_public)
+    1554              
+    1555              $C$DW$155       .dwtag  DW_TAG_member
+    1556                      .dwattr $C$DW$155, DW_AT_type(*$C$DW$T$37)
+    1557                      .dwattr $C$DW$155, DW_AT_name("bit")
+    1558                      .dwattr $C$DW$155, DW_AT_TI_symbol_name("_bit")
+    1559                      .dwattr $C$DW$155, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1560                      .dwattr $C$DW$155, DW_AT_accessibility(DW_ACCESS_public)
+    1561              
+    1562                      .dwendtag $C$DW$T$38
+    1563              
+    1564              
+    1565              $C$DW$T$41      .dwtag  DW_TAG_structure_type
+    1566                      .dwattr $C$DW$T$41, DW_AT_name("GPIO_CTRL_REGS")
+    1567                      .dwattr $C$DW$T$41, DW_AT_byte_size(0x40)
+    1568              $C$DW$156       .dwtag  DW_TAG_member
+    1569                      .dwattr $C$DW$156, DW_AT_type(*$C$DW$T$30)
+    1570                      .dwattr $C$DW$156, DW_AT_name("GPACTRL")
+    1571                      .dwattr $C$DW$156, DW_AT_TI_symbol_name("_GPACTRL")
+    1572                      .dwattr $C$DW$156, DW_AT_data_member_location[DW_OP_plus_uconst 0x0]
+    1573                      .dwattr $C$DW$156, DW_AT_accessibility(DW_ACCESS_public)
+    1574              
+    1575              $C$DW$157       .dwtag  DW_TAG_member
+    1576                      .dwattr $C$DW$157, DW_AT_type(*$C$DW$T$26)
+    1577                      .dwattr $C$DW$157, DW_AT_name("GPAQSEL1")
+    1578                      .dwattr $C$DW$157, DW_AT_TI_symbol_name("_GPAQSEL1")
+    1579                      .dwattr $C$DW$157, DW_AT_data_member_location[DW_OP_plus_uconst 0x2]
+    1580                      .dwattr $C$DW$157, DW_AT_accessibility(DW_ACCESS_public)
+    1581              
+    1582              $C$DW$158       .dwtag  DW_TAG_member
+    1583                      .dwattr $C$DW$158, DW_AT_type(*$C$DW$T$28)
+    1584                      .dwattr $C$DW$158, DW_AT_name("GPAQSEL2")
+    1585                      .dwattr $C$DW$158, DW_AT_TI_symbol_name("_GPAQSEL2")
+    1586                      .dwattr $C$DW$158, DW_AT_data_member_location[DW_OP_plus_uconst 0x4]
+TMS320C2000 Assembler PC v16.9.6 Tue Mar 06 18:34:40 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Admin\AppData\Local\Temp\{399071AC-28E2-450C-AB44-40EE58F24F3A} PAGE   30
+
+    1587                      .dwattr $C$DW$158, DW_AT_accessibility(DW_ACCESS_public)
+    1588              
+    1589              $C$DW$159       .dwtag  DW_TAG_member
+    1590                      .dwattr $C$DW$159, DW_AT_type(*$C$DW$T$26)
+    1591                      .dwattr $C$DW$159, DW_AT_name("GPAMUX1")
+    1592                      .dwattr $C$DW$159, DW_AT_TI_symbol_name("_GPAMUX1")
+    1593                      .dwattr $C$DW$159, DW_AT_data_member_location[DW_OP_plus_uconst 0x6]
+    1594                      .dwattr $C$DW$159, DW_AT_accessibility(DW_ACCESS_public)
+    1595              
+    1596              $C$DW$160       .dwtag  DW_TAG_member
+    1597                      .dwattr $C$DW$160, DW_AT_type(*$C$DW$T$28)
+    1598                      .dwattr $C$DW$160, DW_AT_name("GPAMUX2")
+    1599                      .dwattr $C$DW$160, DW_AT_TI_symbol_name("_GPAMUX2")
+    1600                      .dwattr $C$DW$160, DW_AT_data_member_location[DW_OP_plus_uconst 0x8]
+    1601                      .dwattr $C$DW$160, DW_AT_accessibility(DW_ACCESS_public)
+    1602              
+    1603              $C$DW$161       .dwtag  DW_TAG_member
+    1604                      .dwattr $C$DW$161, DW_AT_type(*$C$DW$T$32)
+    1605                      .dwattr $C$DW$161, DW_AT_name("GPADIR")
+    1606                      .dwattr $C$DW$161, DW_AT_TI_symbol_name("_GPADIR")
+    1607                      .dwattr $C$DW$161, DW_AT_data_member_location[DW_OP_plus_uconst 0xa]
+    1608                      .dwattr $C$DW$161, DW_AT_accessibility(DW_ACCESS_public)
+    1609              
+    1610              $C$DW$162       .dwtag  DW_TAG_member
+    1611                      .dwattr $C$DW$162, DW_AT_type(*$C$DW$T$32)
+    1612                      .dwattr $C$DW$162, DW_AT_name("GPAPUD")
+    1613                      .dwattr $C$DW$162, DW_AT_TI_symbol_name("_GPAPUD")
+    1614                      .dwattr $C$DW$162, DW_AT_data_member_location[DW_OP_plus_uconst 0xc]
+    1615                      .dwattr $C$DW$162, DW_AT_accessibility(DW_ACCESS_public)
+    1616              
+    1617              $C$DW$163       .dwtag  DW_TAG_member
+    1618                      .dwattr $C$DW$163, DW_AT_type(*$C$DW$T$23)
+    1619                      .dwattr $C$DW$163, DW_AT_name("rsvd1")
+    1620                      .dwattr $C$DW$163, DW_AT_TI_symbol_name("_rsvd1")
+    1621                      .dwattr $C$DW$163, DW_AT_data_member_location[DW_OP_plus_uconst 0xe]
+    1622                      .dwattr $C$DW$163, DW_AT_accessibility(DW_ACCESS_public)
+    1623              
+    1624              $C$DW$164       .dwtag  DW_TAG_member
+    1625                      .dwattr $C$DW$164, DW_AT_type(*$C$DW$T$36)
+    1626                      .dwattr $C$DW$164, DW_AT_name("GPBCTRL")
+    1627                      .dwattr $C$DW$164, DW_AT_TI_symbol_name("_GPBCTRL")
+    1628                      .dwattr $C$DW$164, DW_AT_data_member_location[DW_OP_plus_uconst 0x10]
+    1629                      .dwattr $C$DW$164, DW_AT_accessibility(DW_ACCESS_public)
+    1630              
+    1631              $C$DW$165       .dwtag  DW_TAG_member
+    1632                      .dwattr $C$DW$165, DW_AT_type(*$C$DW$T$34)
+    1633                      .dwattr $C$DW$165, DW_AT_name("GPBQSEL1")
+    1634                      .dwattr $C$DW$165, DW_AT_TI_symbol_name("_GPBQSEL1")
+    1635                      .dwattr $C$DW$165, DW_AT_data_member_location[DW_OP_plus_uconst 0x12]
+    1636                      .dwattr $C$DW$165, DW_AT_accessibility(DW_ACCESS_public)
+    1637              
+    1638              $C$DW$166       .dwtag  DW_TAG_member
+    1639                      .dwattr $C$DW$166, DW_AT_type(*$C$DW$T$23)
+    1640                      .dwattr $C$DW$166, DW_AT_name("rsvd2")
+    1641                      .dwattr $C$DW$166, DW_AT_TI_symbol_name("_rsvd2")
+TMS320C2000 Assembler PC v16.9.6 Tue Mar 06 18:34:40 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Admin\AppData\Local\Temp\{399071AC-28E2-450C-AB44-40EE58F24F3A} PAGE   31
+
+    1642                      .dwattr $C$DW$166, DW_AT_data_member_location[DW_OP_plus_uconst 0x14]
+    1643                      .dwattr $C$DW$166, DW_AT_accessibility(DW_ACCESS_public)
+    1644              
+    1645              $C$DW$167       .dwtag  DW_TAG_member
+    1646                      .dwattr $C$DW$167, DW_AT_type(*$C$DW$T$34)
+    1647                      .dwattr $C$DW$167, DW_AT_name("GPBMUX1")
+    1648                      .dwattr $C$DW$167, DW_AT_TI_symbol_name("_GPBMUX1")
+    1649                      .dwattr $C$DW$167, DW_AT_data_member_location[DW_OP_plus_uconst 0x16]
+    1650                      .dwattr $C$DW$167, DW_AT_accessibility(DW_ACCESS_public)
+    1651              
+    1652              $C$DW$168       .dwtag  DW_TAG_member
+    1653                      .dwattr $C$DW$168, DW_AT_type(*$C$DW$T$23)
+    1654                      .dwattr $C$DW$168, DW_AT_name("rsvd3")
+    1655                      .dwattr $C$DW$168, DW_AT_TI_symbol_name("_rsvd3")
+    1656                      .dwattr $C$DW$168, DW_AT_data_member_location[DW_OP_plus_uconst 0x18]
+    1657                      .dwattr $C$DW$168, DW_AT_accessibility(DW_ACCESS_public)
+    1658              
+    1659              $C$DW$169       .dwtag  DW_TAG_member
+    1660                      .dwattr $C$DW$169, DW_AT_type(*$C$DW$T$38)
+    1661                      .dwattr $C$DW$169, DW_AT_name("GPBDIR")
+    1662                      .dwattr $C$DW$169, DW_AT_TI_symbol_name("_GPBDIR")
+    1663                      .dwattr $C$DW$169, DW_AT_data_member_location[DW_OP_plus_uconst 0x1a]
+    1664                      .dwattr $C$DW$169, DW_AT_accessibility(DW_ACCESS_public)
+    1665              
+    1666              $C$DW$170       .dwtag  DW_TAG_member
+    1667                      .dwattr $C$DW$170, DW_AT_type(*$C$DW$T$38)
+    1668                      .dwattr $C$DW$170, DW_AT_name("GPBPUD")
+    1669                      .dwattr $C$DW$170, DW_AT_TI_symbol_name("_GPBPUD")
+    1670                      .dwattr $C$DW$170, DW_AT_data_member_location[DW_OP_plus_uconst 0x1c]
+    1671                      .dwattr $C$DW$170, DW_AT_accessibility(DW_ACCESS_public)
+    1672              
+    1673              $C$DW$171       .dwtag  DW_TAG_member
+    1674                      .dwattr $C$DW$171, DW_AT_type(*$C$DW$T$39)
+    1675                      .dwattr $C$DW$171, DW_AT_name("rsvd4")
+    1676                      .dwattr $C$DW$171, DW_AT_TI_symbol_name("_rsvd4")
+    1677                      .dwattr $C$DW$171, DW_AT_data_member_location[DW_OP_plus_uconst 0x1e]
+    1678                      .dwattr $C$DW$171, DW_AT_accessibility(DW_ACCESS_public)
+    1679              
+    1680              $C$DW$172       .dwtag  DW_TAG_member
+    1681                      .dwattr $C$DW$172, DW_AT_type(*$C$DW$T$24)
+    1682                      .dwattr $C$DW$172, DW_AT_name("AIOMUX1")
+    1683                      .dwattr $C$DW$172, DW_AT_TI_symbol_name("_AIOMUX1")
+    1684                      .dwattr $C$DW$172, DW_AT_data_member_location[DW_OP_plus_uconst 0x36]
+    1685                      .dwattr $C$DW$172, DW_AT_accessibility(DW_ACCESS_public)
+    1686              
+    1687              $C$DW$173       .dwtag  DW_TAG_member
+    1688                      .dwattr $C$DW$173, DW_AT_type(*$C$DW$T$23)
+    1689                      .dwattr $C$DW$173, DW_AT_name("rsvd5")
+    1690                      .dwattr $C$DW$173, DW_AT_TI_symbol_name("_rsvd5")
+    1691                      .dwattr $C$DW$173, DW_AT_data_member_location[DW_OP_plus_uconst 0x38]
+    1692                      .dwattr $C$DW$173, DW_AT_accessibility(DW_ACCESS_public)
+    1693              
+    1694              $C$DW$174       .dwtag  DW_TAG_member
+    1695                      .dwattr $C$DW$174, DW_AT_type(*$C$DW$T$21)
+    1696                      .dwattr $C$DW$174, DW_AT_name("AIODIR")
+TMS320C2000 Assembler PC v16.9.6 Tue Mar 06 18:34:40 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Admin\AppData\Local\Temp\{399071AC-28E2-450C-AB44-40EE58F24F3A} PAGE   32
+
+    1697                      .dwattr $C$DW$174, DW_AT_TI_symbol_name("_AIODIR")
+    1698                      .dwattr $C$DW$174, DW_AT_data_member_location[DW_OP_plus_uconst 0x3a]
+    1699                      .dwattr $C$DW$174, DW_AT_accessibility(DW_ACCESS_public)
+    1700              
+    1701              $C$DW$175       .dwtag  DW_TAG_member
+    1702                      .dwattr $C$DW$175, DW_AT_type(*$C$DW$T$40)
+    1703                      .dwattr $C$DW$175, DW_AT_name("rsvd6")
+    1704                      .dwattr $C$DW$175, DW_AT_TI_symbol_name("_rsvd6")
+    1705                      .dwattr $C$DW$175, DW_AT_data_member_location[DW_OP_plus_uconst 0x3b]
+    1706                      .dwattr $C$DW$175, DW_AT_accessibility(DW_ACCESS_public)
+    1707              
+    1708                      .dwendtag $C$DW$T$41
+    1709              
+    1710              $C$DW$176       .dwtag  DW_TAG_TI_far_type
+    1711                      .dwattr $C$DW$176, DW_AT_type(*$C$DW$T$41)
+    1712              
+    1713              $C$DW$T$46      .dwtag  DW_TAG_volatile_type
+    1714                      .dwattr $C$DW$T$46, DW_AT_type(*$C$DW$176)
+    1715              
+    1716              $C$DW$T$2       .dwtag  DW_TAG_unspecified_type
+    1717                      .dwattr $C$DW$T$2, DW_AT_name("void")
+    1718              
+    1719              $C$DW$T$4       .dwtag  DW_TAG_base_type
+    1720                      .dwattr $C$DW$T$4, DW_AT_encoding(DW_ATE_boolean)
+    1721                      .dwattr $C$DW$T$4, DW_AT_name("bool")
+    1722                      .dwattr $C$DW$T$4, DW_AT_byte_size(0x01)
+    1723              
+    1724              $C$DW$T$5       .dwtag  DW_TAG_base_type
+    1725                      .dwattr $C$DW$T$5, DW_AT_encoding(DW_ATE_signed_char)
+    1726                      .dwattr $C$DW$T$5, DW_AT_name("signed char")
+    1727                      .dwattr $C$DW$T$5, DW_AT_byte_size(0x01)
+    1728              
+    1729              $C$DW$T$6       .dwtag  DW_TAG_base_type
+    1730                      .dwattr $C$DW$T$6, DW_AT_encoding(DW_ATE_unsigned_char)
+    1731                      .dwattr $C$DW$T$6, DW_AT_name("unsigned char")
+    1732                      .dwattr $C$DW$T$6, DW_AT_byte_size(0x01)
+    1733              
+    1734              $C$DW$T$7       .dwtag  DW_TAG_base_type
+    1735                      .dwattr $C$DW$T$7, DW_AT_encoding(DW_ATE_signed_char)
+    1736                      .dwattr $C$DW$T$7, DW_AT_name("wchar_t")
+    1737                      .dwattr $C$DW$T$7, DW_AT_byte_size(0x01)
+    1738              
+    1739              $C$DW$T$8       .dwtag  DW_TAG_base_type
+    1740                      .dwattr $C$DW$T$8, DW_AT_encoding(DW_ATE_signed)
+    1741                      .dwattr $C$DW$T$8, DW_AT_name("short")
+    1742                      .dwattr $C$DW$T$8, DW_AT_byte_size(0x01)
+    1743              
+    1744              $C$DW$T$9       .dwtag  DW_TAG_base_type
+    1745                      .dwattr $C$DW$T$9, DW_AT_encoding(DW_ATE_unsigned)
+    1746                      .dwattr $C$DW$T$9, DW_AT_name("unsigned short")
+    1747                      .dwattr $C$DW$T$9, DW_AT_byte_size(0x01)
+    1748              
+    1749              $C$DW$T$10      .dwtag  DW_TAG_base_type
+    1750                      .dwattr $C$DW$T$10, DW_AT_encoding(DW_ATE_signed)
+    1751                      .dwattr $C$DW$T$10, DW_AT_name("int")
+TMS320C2000 Assembler PC v16.9.6 Tue Mar 06 18:34:40 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Admin\AppData\Local\Temp\{399071AC-28E2-450C-AB44-40EE58F24F3A} PAGE   33
+
+    1752                      .dwattr $C$DW$T$10, DW_AT_byte_size(0x01)
+    1753              
+    1754              $C$DW$T$11      .dwtag  DW_TAG_base_type
+    1755                      .dwattr $C$DW$T$11, DW_AT_encoding(DW_ATE_unsigned)
+    1756                      .dwattr $C$DW$T$11, DW_AT_name("unsigned int")
+    1757                      .dwattr $C$DW$T$11, DW_AT_byte_size(0x01)
+    1758              
+    1759              $C$DW$T$19      .dwtag  DW_TAG_typedef
+    1760                      .dwattr $C$DW$T$19, DW_AT_name("Uint16")
+    1761                      .dwattr $C$DW$T$19, DW_AT_type(*$C$DW$T$11)
+    1762                      .dwattr $C$DW$T$19, DW_AT_language(DW_LANG_C)
+    1763              
+    1764              
+    1765              $C$DW$T$39      .dwtag  DW_TAG_array_type
+    1766                      .dwattr $C$DW$T$39, DW_AT_type(*$C$DW$T$19)
+    1767                      .dwattr $C$DW$T$39, DW_AT_language(DW_LANG_C)
+    1768                      .dwattr $C$DW$T$39, DW_AT_byte_size(0x18)
+    1769              $C$DW$177       .dwtag  DW_TAG_subrange_type
+    1770                      .dwattr $C$DW$177, DW_AT_upper_bound(0x17)
+    1771              
+    1772                      .dwendtag $C$DW$T$39
+    1773              
+    1774              
+    1775              $C$DW$T$40      .dwtag  DW_TAG_array_type
+    1776                      .dwattr $C$DW$T$40, DW_AT_type(*$C$DW$T$19)
+    1777                      .dwattr $C$DW$T$40, DW_AT_language(DW_LANG_C)
+    1778                      .dwattr $C$DW$T$40, DW_AT_byte_size(0x05)
+    1779              $C$DW$178       .dwtag  DW_TAG_subrange_type
+    1780                      .dwattr $C$DW$178, DW_AT_upper_bound(0x04)
+    1781              
+    1782                      .dwendtag $C$DW$T$40
+    1783              
+    1784              $C$DW$T$12      .dwtag  DW_TAG_base_type
+    1785                      .dwattr $C$DW$T$12, DW_AT_encoding(DW_ATE_signed)
+    1786                      .dwattr $C$DW$T$12, DW_AT_name("long")
+    1787                      .dwattr $C$DW$T$12, DW_AT_byte_size(0x02)
+    1788              
+    1789              $C$DW$T$13      .dwtag  DW_TAG_base_type
+    1790                      .dwattr $C$DW$T$13, DW_AT_encoding(DW_ATE_unsigned)
+    1791                      .dwattr $C$DW$T$13, DW_AT_name("unsigned long")
+    1792                      .dwattr $C$DW$T$13, DW_AT_byte_size(0x02)
+    1793              
+    1794              $C$DW$T$23      .dwtag  DW_TAG_typedef
+    1795                      .dwattr $C$DW$T$23, DW_AT_name("Uint32")
+    1796                      .dwattr $C$DW$T$23, DW_AT_type(*$C$DW$T$13)
+    1797                      .dwattr $C$DW$T$23, DW_AT_language(DW_LANG_C)
+    1798              
+    1799              $C$DW$T$14      .dwtag  DW_TAG_base_type
+    1800                      .dwattr $C$DW$T$14, DW_AT_encoding(DW_ATE_signed)
+    1801                      .dwattr $C$DW$T$14, DW_AT_name("long long")
+    1802                      .dwattr $C$DW$T$14, DW_AT_byte_size(0x04)
+    1803              
+    1804              $C$DW$T$15      .dwtag  DW_TAG_base_type
+    1805                      .dwattr $C$DW$T$15, DW_AT_encoding(DW_ATE_unsigned)
+    1806                      .dwattr $C$DW$T$15, DW_AT_name("unsigned long long")
+TMS320C2000 Assembler PC v16.9.6 Tue Mar 06 18:34:40 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Admin\AppData\Local\Temp\{399071AC-28E2-450C-AB44-40EE58F24F3A} PAGE   34
+
+    1807                      .dwattr $C$DW$T$15, DW_AT_byte_size(0x04)
+    1808              
+    1809              $C$DW$T$16      .dwtag  DW_TAG_base_type
+    1810                      .dwattr $C$DW$T$16, DW_AT_encoding(DW_ATE_float)
+    1811                      .dwattr $C$DW$T$16, DW_AT_name("float")
+    1812                      .dwattr $C$DW$T$16, DW_AT_byte_size(0x02)
+    1813              
+    1814              $C$DW$T$17      .dwtag  DW_TAG_base_type
+    1815                      .dwattr $C$DW$T$17, DW_AT_encoding(DW_ATE_float)
+    1816                      .dwattr $C$DW$T$17, DW_AT_name("double")
+    1817                      .dwattr $C$DW$T$17, DW_AT_byte_size(0x02)
+    1818              
+    1819              $C$DW$T$18      .dwtag  DW_TAG_base_type
+    1820                      .dwattr $C$DW$T$18, DW_AT_encoding(DW_ATE_float)
+    1821                      .dwattr $C$DW$T$18, DW_AT_name("long double")
+    1822                      .dwattr $C$DW$T$18, DW_AT_byte_size(0x04)
+    1823              
+    1824                      .dwattr $C$DW$CU, DW_AT_language(DW_LANG_C)
+    1825              
+    1826              ;***************************************************************
+    1827              ;* DWARF CIE ENTRIES                                           *
+    1828              ;***************************************************************
+    1829              
+    1830              $C$DW$CIE       .dwcie 26
+    1831                      .dwcfi  cfa_register, 20
+    1832                      .dwcfi  cfa_offset, 0
+    1833                      .dwcfi  same_value, 28
+    1834                      .dwcfi  same_value, 6
+    1835                      .dwcfi  same_value, 7
+    1836                      .dwcfi  same_value, 8
+    1837                      .dwcfi  same_value, 9
+    1838                      .dwcfi  same_value, 10
+    1839                      .dwcfi  same_value, 11
+    1840                      .dwendentry
+    1841              
+    1842              ;***************************************************************
+    1843              ;* DWARF REGISTER MAP                                          *
+    1844              ;***************************************************************
+    1845              
+    1846              $C$DW$179       .dwtag  DW_TAG_TI_assign_register
+    1847                      .dwattr $C$DW$179, DW_AT_name("AL")
+    1848                      .dwattr $C$DW$179, DW_AT_location[DW_OP_reg0]
+    1849              
+    1850              $C$DW$180       .dwtag  DW_TAG_TI_assign_register
+    1851                      .dwattr $C$DW$180, DW_AT_name("AH")
+    1852                      .dwattr $C$DW$180, DW_AT_location[DW_OP_reg1]
+    1853              
+    1854              $C$DW$181       .dwtag  DW_TAG_TI_assign_register
+    1855                      .dwattr $C$DW$181, DW_AT_name("PL")
+    1856                      .dwattr $C$DW$181, DW_AT_location[DW_OP_reg2]
+    1857              
+    1858              $C$DW$182       .dwtag  DW_TAG_TI_assign_register
+    1859                      .dwattr $C$DW$182, DW_AT_name("PH")
+    1860                      .dwattr $C$DW$182, DW_AT_location[DW_OP_reg3]
+    1861              
+TMS320C2000 Assembler PC v16.9.6 Tue Mar 06 18:34:40 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Admin\AppData\Local\Temp\{399071AC-28E2-450C-AB44-40EE58F24F3A} PAGE   35
+
+    1862              $C$DW$183       .dwtag  DW_TAG_TI_assign_register
+    1863                      .dwattr $C$DW$183, DW_AT_name("SP")
+    1864                      .dwattr $C$DW$183, DW_AT_location[DW_OP_reg20]
+    1865              
+    1866              $C$DW$184       .dwtag  DW_TAG_TI_assign_register
+    1867                      .dwattr $C$DW$184, DW_AT_name("XT")
+    1868                      .dwattr $C$DW$184, DW_AT_location[DW_OP_reg21]
+    1869              
+    1870              $C$DW$185       .dwtag  DW_TAG_TI_assign_register
+    1871                      .dwattr $C$DW$185, DW_AT_name("T")
+    1872                      .dwattr $C$DW$185, DW_AT_location[DW_OP_reg22]
+    1873              
+    1874              $C$DW$186       .dwtag  DW_TAG_TI_assign_register
+    1875                      .dwattr $C$DW$186, DW_AT_name("ST0")
+    1876                      .dwattr $C$DW$186, DW_AT_location[DW_OP_reg23]
+    1877              
+    1878              $C$DW$187       .dwtag  DW_TAG_TI_assign_register
+    1879                      .dwattr $C$DW$187, DW_AT_name("ST1")
+    1880                      .dwattr $C$DW$187, DW_AT_location[DW_OP_reg24]
+    1881              
+    1882              $C$DW$188       .dwtag  DW_TAG_TI_assign_register
+    1883                      .dwattr $C$DW$188, DW_AT_name("PC")
+    1884                      .dwattr $C$DW$188, DW_AT_location[DW_OP_reg25]
+    1885              
+    1886              $C$DW$189       .dwtag  DW_TAG_TI_assign_register
+    1887                      .dwattr $C$DW$189, DW_AT_name("RPC")
+    1888                      .dwattr $C$DW$189, DW_AT_location[DW_OP_reg26]
+    1889              
+    1890              $C$DW$190       .dwtag  DW_TAG_TI_assign_register
+    1891                      .dwattr $C$DW$190, DW_AT_name("FP")
+    1892                      .dwattr $C$DW$190, DW_AT_location[DW_OP_reg28]
+    1893              
+    1894              $C$DW$191       .dwtag  DW_TAG_TI_assign_register
+    1895                      .dwattr $C$DW$191, DW_AT_name("DP")
+    1896                      .dwattr $C$DW$191, DW_AT_location[DW_OP_reg29]
+    1897              
+    1898              $C$DW$192       .dwtag  DW_TAG_TI_assign_register
+    1899                      .dwattr $C$DW$192, DW_AT_name("SXM")
+    1900                      .dwattr $C$DW$192, DW_AT_location[DW_OP_reg30]
+    1901              
+    1902              $C$DW$193       .dwtag  DW_TAG_TI_assign_register
+    1903                      .dwattr $C$DW$193, DW_AT_name("PM")
+    1904                      .dwattr $C$DW$193, DW_AT_location[DW_OP_reg31]
+    1905              
+    1906              $C$DW$194       .dwtag  DW_TAG_TI_assign_register
+    1907                      .dwattr $C$DW$194, DW_AT_name("OVM")
+    1908                      .dwattr $C$DW$194, DW_AT_location[DW_OP_regx 0x20]
+    1909              
+    1910              $C$DW$195       .dwtag  DW_TAG_TI_assign_register
+    1911                      .dwattr $C$DW$195, DW_AT_name("PAGE0")
+    1912                      .dwattr $C$DW$195, DW_AT_location[DW_OP_regx 0x21]
+    1913              
+    1914              $C$DW$196       .dwtag  DW_TAG_TI_assign_register
+    1915                      .dwattr $C$DW$196, DW_AT_name("AMODE")
+    1916                      .dwattr $C$DW$196, DW_AT_location[DW_OP_regx 0x22]
+TMS320C2000 Assembler PC v16.9.6 Tue Mar 06 18:34:40 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Admin\AppData\Local\Temp\{399071AC-28E2-450C-AB44-40EE58F24F3A} PAGE   36
+
+    1917              
+    1918              $C$DW$197       .dwtag  DW_TAG_TI_assign_register
+    1919                      .dwattr $C$DW$197, DW_AT_name("INTM")
+    1920                      .dwattr $C$DW$197, DW_AT_location[DW_OP_regx 0x23]
+    1921              
+    1922              $C$DW$198       .dwtag  DW_TAG_TI_assign_register
+    1923                      .dwattr $C$DW$198, DW_AT_name("IFR")
+    1924                      .dwattr $C$DW$198, DW_AT_location[DW_OP_regx 0x24]
+    1925              
+    1926              $C$DW$199       .dwtag  DW_TAG_TI_assign_register
+    1927                      .dwattr $C$DW$199, DW_AT_name("IER")
+    1928                      .dwattr $C$DW$199, DW_AT_location[DW_OP_regx 0x25]
+    1929              
+    1930              $C$DW$200       .dwtag  DW_TAG_TI_assign_register
+    1931                      .dwattr $C$DW$200, DW_AT_name("V")
+    1932                      .dwattr $C$DW$200, DW_AT_location[DW_OP_regx 0x26]
+    1933              
+    1934              $C$DW$201       .dwtag  DW_TAG_TI_assign_register
+    1935                      .dwattr $C$DW$201, DW_AT_name("PSEUDOH")
+    1936                      .dwattr $C$DW$201, DW_AT_location[DW_OP_regx 0x4c]
+    1937              
+    1938              $C$DW$202       .dwtag  DW_TAG_TI_assign_register
+    1939                      .dwattr $C$DW$202, DW_AT_name("VOL")
+    1940                      .dwattr $C$DW$202, DW_AT_location[DW_OP_regx 0x4d]
+    1941              
+    1942              $C$DW$203       .dwtag  DW_TAG_TI_assign_register
+    1943                      .dwattr $C$DW$203, DW_AT_name("AR0")
+    1944                      .dwattr $C$DW$203, DW_AT_location[DW_OP_reg4]
+    1945              
+    1946              $C$DW$204       .dwtag  DW_TAG_TI_assign_register
+    1947                      .dwattr $C$DW$204, DW_AT_name("XAR0")
+    1948                      .dwattr $C$DW$204, DW_AT_location[DW_OP_reg5]
+    1949              
+    1950              $C$DW$205       .dwtag  DW_TAG_TI_assign_register
+    1951                      .dwattr $C$DW$205, DW_AT_name("AR1")
+    1952                      .dwattr $C$DW$205, DW_AT_location[DW_OP_reg6]
+    1953              
+    1954              $C$DW$206       .dwtag  DW_TAG_TI_assign_register
+    1955                      .dwattr $C$DW$206, DW_AT_name("XAR1")
+    1956                      .dwattr $C$DW$206, DW_AT_location[DW_OP_reg7]
+    1957              
+    1958              $C$DW$207       .dwtag  DW_TAG_TI_assign_register
+    1959                      .dwattr $C$DW$207, DW_AT_name("AR2")
+    1960                      .dwattr $C$DW$207, DW_AT_location[DW_OP_reg8]
+    1961              
+    1962              $C$DW$208       .dwtag  DW_TAG_TI_assign_register
+    1963                      .dwattr $C$DW$208, DW_AT_name("XAR2")
+    1964                      .dwattr $C$DW$208, DW_AT_location[DW_OP_reg9]
+    1965              
+    1966              $C$DW$209       .dwtag  DW_TAG_TI_assign_register
+    1967                      .dwattr $C$DW$209, DW_AT_name("AR3")
+    1968                      .dwattr $C$DW$209, DW_AT_location[DW_OP_reg10]
+    1969              
+    1970              $C$DW$210       .dwtag  DW_TAG_TI_assign_register
+    1971                      .dwattr $C$DW$210, DW_AT_name("XAR3")
+TMS320C2000 Assembler PC v16.9.6 Tue Mar 06 18:34:40 2018
+
+Tools Copyright (c) 1996-2017 Texas Instruments Incorporated
+C:\Users\Admin\AppData\Local\Temp\{399071AC-28E2-450C-AB44-40EE58F24F3A} PAGE   37
+
+    1972                      .dwattr $C$DW$210, DW_AT_location[DW_OP_reg11]
+    1973              
+    1974              $C$DW$211       .dwtag  DW_TAG_TI_assign_register
+    1975                      .dwattr $C$DW$211, DW_AT_name("AR4")
+    1976                      .dwattr $C$DW$211, DW_AT_location[DW_OP_reg12]
+    1977              
+    1978              $C$DW$212       .dwtag  DW_TAG_TI_assign_register
+    1979                      .dwattr $C$DW$212, DW_AT_name("XAR4")
+    1980                      .dwattr $C$DW$212, DW_AT_location[DW_OP_reg13]
+    1981              
+    1982              $C$DW$213       .dwtag  DW_TAG_TI_assign_register
+    1983                      .dwattr $C$DW$213, DW_AT_name("AR5")
+    1984                      .dwattr $C$DW$213, DW_AT_location[DW_OP_reg14]
+    1985              
+    1986              $C$DW$214       .dwtag  DW_TAG_TI_assign_register
+    1987                      .dwattr $C$DW$214, DW_AT_name("XAR5")
+    1988                      .dwattr $C$DW$214, DW_AT_location[DW_OP_reg15]
+    1989              
+    1990              $C$DW$215       .dwtag  DW_TAG_TI_assign_register
+    1991                      .dwattr $C$DW$215, DW_AT_name("AR6")
+    1992                      .dwattr $C$DW$215, DW_AT_location[DW_OP_reg16]
+    1993              
+    1994              $C$DW$216       .dwtag  DW_TAG_TI_assign_register
+    1995                      .dwattr $C$DW$216, DW_AT_name("XAR6")
+    1996                      .dwattr $C$DW$216, DW_AT_location[DW_OP_reg17]
+    1997              
+    1998              $C$DW$217       .dwtag  DW_TAG_TI_assign_register
+    1999                      .dwattr $C$DW$217, DW_AT_name("AR7")
+    2000                      .dwattr $C$DW$217, DW_AT_location[DW_OP_reg18]
+    2001              
+    2002              $C$DW$218       .dwtag  DW_TAG_TI_assign_register
+    2003                      .dwattr $C$DW$218, DW_AT_name("XAR7")
+    2004                      .dwattr $C$DW$218, DW_AT_location[DW_OP_reg19]
+    2005              
+    2006                      .dwendtag $C$DW$CU
+    2007              
+
+No Assembly Errors, No Assembly Warnings
